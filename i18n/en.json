@@ -1,0 +1,79 @@
+{
+    "brand": "GameTrade Bot",
+    "nav": {
+        "demo": "Demo",
+        "features": "Features"
+    },
+    "hero": {
+        "title": "GameTrade Bot",
+        "subtitle": "Automated Trading",
+        "description": "Web Configuration · Automated Product Management · 24/7 Operation · Smart Decision System",
+        "cta": "Get Started"
+    },
+    "features": {
+        "title": "Core Features",
+        "autoManage": {
+            "title": "Automated Product Management",
+            "items": [
+                "Support for 10 * 120 products",
+                "Smart listing strategy",
+                "Auto refresh products",
+                "Batch delisting"
+            ]
+        },
+        "inventory": {
+            "title": "Inventory & Shipping",
+            "items": [
+                "Real-time inventory monitoring",
+                "Order auto-matching",
+                "24/7 automatic shipping",
+                "Shipping status tracking"
+            ]
+        },
+        "message": {
+            "title": "Smart Message Center",
+            "items": [
+                "Centralized order message processing",
+                "Keyword auto-reply",
+                "Smart review system",
+                "Multi-account coordination"
+            ]
+        },
+        "balance": {
+            "title": "Smart Balance Transfer",
+            "items": [
+                "Auto balance transfer from sub-accounts",
+                "Simulated normal trading",
+                "Smart sales boosting",
+                "Auto-stop on insufficient balance"
+            ]
+        },
+        "collection": {
+            "title": "Collection & Delisting",
+            "items": [
+                "Historical product collection",
+                "Market price analysis",
+                "Smart delisting strategy",
+                "Batch operation support"
+            ]
+        },
+        "verification": {
+            "title": "Verification System",
+            "items": [
+                "Auto captcha recognition",
+                "100% success rate",
+                "Proxy IP support",
+                "Auto exception handling"
+            ]
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "note": "Note: bot",
+        "hours": "Online Hours: 9:00 - 21:00",
+        "scan": "Scan to add friend"
+    },
+    "footer": {
+        "copyright": "© 2024 GameTrade Bot. All rights reserved."
+    }
+} 

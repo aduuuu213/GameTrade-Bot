@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO 相关 meta 标签 -->
+        <title>GameTrade Bot - 全自动化游戏交易机器人 | 24小时自动发货</title>
+        <meta name="description" content="GameTrade Bot是GD游戏交易自动化机器人，提供24小时自动发货、智能消息处理、全自动商品管理等服务。支持批量操作，让游戏交易更简单高效。">
+        <meta name="keywords" content="游戏交易,自动发货,游戏账号,自动化交易,GameTrade Bot,游戏平台">
+        <meta name="author" content="GameTrade Bot">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="theme-color" content="#1a365d">
+        
+        <!-- Open Graph 标签 -->
+        <meta property="og:title" content="GameTrade Bot - 全自动化游戏交易机器人">
+        <meta property="og:description" content="24小时自动发货，智能消息处理，让游戏交易更简单高效。">
+        <meta property="og:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+        <meta property="og:url" content="https://www.gd-bot.com">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="GameTrade Bot">
+        <meta property="og:locale" content="zh_CN">
+        
+        <!-- Twitter Card 标签 -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="GameTrade Bot - 全自动化游戏交易机器人">
+        <meta name="twitter:description" content="24小时自动发货，智能消息处理，让游戏交易更简单高效。">
+        <meta name="twitter:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+
+        <!-- 规范链接 -->
+        <link rel="canonical" href="https://www.gd-bot.com">
+        
+        <!-- 网站图标 -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+        <link rel="mask-icon" href="/favicon.png" color="#1a365d">
+        <meta name="msapplication-TileColor" content="#1a365d">
+
+        <!-- CSS 引入 -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        
+        <!-- 预加载关键资源 -->
+        <link rel="preload" href="js/i18n.js" as="script">
+        <link rel="preload" href="i18n/zh-CN.json" as="fetch" crossorigin>
+        
+        <!-- 引入 Iconify -->
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js" defer></script>
+        
+        <!-- 结构化数据 -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "GameTrade Bot",
+          "description": "GD全自动化游戏交易机器人，提供24小时自动发货服务",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "100"
+          }
+        }
+        </script>
+    </head>
+    <body class="bg-gray-50">
+        <!-- 语言选择器 -->
+        <div class="language-selector">
+            <select id="langSelect">
+                <option value="zh-CN">简体中文</option>
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+
+        <!-- 导航栏 -->
+        <header>
+            <nav class="bg-white shadow-lg fixed w-full z-50" aria-label="主导航">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="flex justify-between h-16">
+                        <div class="flex items-center">
+                            <span class="text-2xl font-bold text-blue-600" data-i18n="brand">GameTrade Bot</span>
+                        </div>
+                        <div class="flex items-center space-x-8">
+                            <a href="#demo" class="text-gray-700 hover:text-blue-600" data-i18n="nav.demo">演示</a>
+                            <a href="#features" class="text-gray-700 hover:text-blue-600" data-i18n="nav.features">特点</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- 主横幅 -->
+            <section class="hero-bg text-white pt-32 pb-20" aria-label="主要内容">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <h1 class="text-5xl font-bold mb-6" data-i18n="hero.title">GameTrade Bot</h1>
+                    <p class="text-2xl font-semibold mb-4" data-i18n="hero.subtitle">全自动化贩卖</p>
+                    <p class="text-xl mb-8" data-i18n="hero.description">Web端配置 · 全自动商品管理 · 24小时无人值守 · 智能决策系统</p>
+                    <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700" data-i18n="hero.cta">立即体验</a>
+                </div>
+            </section>
+
+            <!-- 视频演示 -->
+            <section id="demo" class="py-20 bg-gray-50" aria-label="功能演示">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12">功能演示</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-gray-800">全自动化操作演示</h3>
+                            <p class="text-gray-600 text-lg">观看系统如何实现全自动化商品管理、自动发货、智能消息处理等核心功能。</p>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>Web端一键配置</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>全自动商品管理</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>智能消息处理</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative rounded-lg overflow-hidden shadow-xl">
+                            <video class="w-full" controls poster="images/82b91715850941.png">
+                                <source src="mp4/ba301726479789_20250318_18005034.mp4" type="video/mp4">
+                                您的浏览器不支持视频播放。
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 核心功能 -->
+            <section id="features" class="py-20" aria-label="核心功能">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12" data-i18n="features.title">核心功能</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- 功能卡片 -->
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="features.autoManage.title">全自动商品管理</h3>
+                            <ul class="text-gray-600 space-y-2" data-i18n="features.autoManage.items"></ul>
+                        </div>
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="features.inventory.title">库存与发货管理</h3>
+                            <ul class="text-gray-600 space-y-2" data-i18n="features.inventory.items"></ul>
+                        </div>
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="features.message.title">智能消息中台</h3>
+                            <ul class="text-gray-600 space-y-2" data-i18n="features.message.items"></ul>
+                        </div>
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="features.balance.title">余额智能转移</h3>
+                            <ul class="text-gray-600 space-y-2" data-i18n="features.balance.items"></ul>
+                        </div>
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="features.collection.title">采集下架系统</h3>
+                            <ul class="text-gray-600 space-y-2" data-i18n="features.collection.items"></ul>
+                        </div>
+                        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-4" data-i18n="features.verification.title">打码验证系统</h3>
+                            <ul class="text-gray-600 space-y-2" data-i18n="features.verification.items"></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 联系方式 -->
+        <aside>
+            <!-- 桌面端浮动版本 -->
+            <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden md:block" aria-label="联系方式">
+                <div class="bg-white rounded-xl shadow-2xl p-6 max-w-xs transform hover:scale-105 transition duration-300">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-green-100 rounded-full p-3 mb-4">
+                            <span class="iconify" data-icon="mdi:wechat"></span>
+                        </div>
+                        <div class="text-center mb-4">
+                            <h3 class="text-lg font-bold mb-2" data-i18n="contact.note">备注: bot</h3>
+                            <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
+                        </div>
+                        <div class="mb-4">
+                            <img src="images/22cb3bc9f60e2c3cd492ec7826d613f.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md">
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs text-gray-500" data-i18n="contact.scan">扫码添加好友</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 移动端底部版本 -->
+            <div class="block md:hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 shadow-up-lg py-6 px-4" aria-label="移动端联系方式">
+                <div class="max-w-md mx-auto backdrop-blur-sm bg-white/70 rounded-xl p-6">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-green-100 rounded-full p-3 mb-4">
+                            <span class="iconify" data-icon="mdi:wechat"></span>
+                        </div>
+                        <div class="text-center mb-4">
+                            <h3 class="text-lg font-bold mb-2" data-i18n="contact.note">备注: bot</h3>
+                            <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
+                        </div>
+                        <div class="mb-4">
+                            <img src="images/22cb3bc9f60e2c3cd492ec7826d613f.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md">
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs text-gray-500" data-i18n="contact.scan">扫码添加好友</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 页脚 -->
+        <footer class="bg-gray-800 text-white py-8" aria-label="页脚">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p data-i18n="footer.copyright">© 2024 GameTrade Bot. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- JavaScript 引入 -->
+        <script src="js/i18n.js"></script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+{
+    "brand": "GameTrade Bot",
+    "nav": {
+        "demo": "演示",
+        "features": "特点"
+    },
+    "hero": {
+        "title": "GameTrade Bot",
+        "subtitle": "全自动化贩卖",
+        "description": "Web端配置 · 全自动商品管理 · 24小时无人值守 · 智能决策系统",
+        "cta": "立即体验"
+    },
+    "features": {
+        "title": "核心功能",
+        "autoManage": {
+            "title": "全自动商品管理",
+            "items": [
+                "支持10 * 120号商品管理",
+                "智能上架策略",
+                "自动刷新商品",
+                "批量下架功能"
+            ]
+        },
+        "inventory": {
+            "title": "库存与发货管理",
+            "items": [
+                "实时库存监控",
+                "订单自动匹配",
+                "24小时自动发货",
+                "发货状态追踪"
+            ]
+        },
+        "message": {
+            "title": "智能消息中台",
+            "items": [
+                "集中处理订单消息",
+                "关键词自动回复",
+                "智能评价系统",
+                "多账号协同处理"
+            ]
+        },
+        "balance": {
+            "title": "余额智能转移",
+            "items": [
+                "小号余额自动转移",
+                "模拟正常交易",
+                "智能刷销量",
+                "余额不足自动停止"
+            ]
+        },
+        "collection": {
+            "title": "采集下架系统",
+            "items": [
+                "历史商品采集",
+                "市场价格分析",
+                "智能下架策略",
+                "批量操作支持"
+            ]
+        },
+        "verification": {
+            "title": "打码验证系统",
+            "items": [
+                "自动验证码识别",
+                "100%出品率",
+                "代理IP支持",
+                "异常自动处理"
+            ]
+        }
+    },
+    "contact": {
+        "title": "联系我们",
+        "note": "备注: bot",
+        "hours": "在线时间：9:00 - 21:00",
+        "scan": "扫码添加好友"
+    },
+    "footer": {
+        "copyright": "© 2024 GameTrade Bot. All rights reserved."
+    }
+} 
