@@ -69,11 +69,32 @@
     },
     "contact": {
         "title": "お問い合わせ",
-        "note": "備考: bot",
-        "hours": "営業時間：9:00 - 21:00",
-        "scan": "QRコードをスキャンして友達追加"
+        "note": "メモ: bot",
+        "hours": "オンライン時間：9:00 - 21:00",
+        "scan": "QRコードをスキャンして友達追加",
+        "wechat": {
+            "title": "WeChat"
+        },
+        "telegram": {
+            "title": "Telegram",
+            "hours": "24時間オンライン",
+            "join": "Telegramに参加"
+        }
     },
     "footer": {
         "copyright": "© 2024 GameTrade Bot. All rights reserved."
+    },
+    "demo": {
+        "title": "デモ",
+        "subtitle": "自動操作デモ",
+        "description": "システムが自動商品管理、自動発送、スマートメッセージ処理などの主要機能を実現する方法をご覧ください。",
+        "features": {
+            "web": "Webワンクリック設定",
+            "manage": "商品自動管理",
+            "message": "スマートメッセージ処理"
+        },
+        "video": {
+            "error": "お使いのブラウザは動画再生に対応していません。"
+        }
     }
 } 

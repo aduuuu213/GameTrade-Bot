@@ -88,8 +88,8 @@
                             <span class="text-2xl font-bold text-blue-600" data-i18n="brand">GameTrade Bot</span>
                         </div>
                         <div class="flex items-center space-x-8">
-                            <a href="#demo" class="text-gray-700 hover:text-blue-600" data-i18n="nav.demo">演示</a>
-                            <a href="#features" class="text-gray-700 hover:text-blue-600" data-i18n="nav.features">特点</a>
+                            <a href="#demo" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.demo">演示</a>
+                            <a href="#features" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.features">特点</a>
                         </div>
                     </div>
                 </div>
@@ -110,36 +110,36 @@
             <!-- 视频演示 -->
             <section id="demo" class="py-20 bg-gray-50" aria-label="功能演示">
                 <div class="max-w-7xl mx-auto px-4">
-                    <h2 class="text-3xl font-bold text-center mb-12">功能演示</h2>
+                    <h2 class="text-3xl font-bold text-center mb-12" data-i18n="demo.title">功能演示</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="space-y-6">
-                            <h3 class="text-2xl font-bold text-gray-800">全自动化操作演示</h3>
-                            <p class="text-gray-600 text-lg">观看系统如何实现全自动化商品管理、自动发货、智能消息处理等核心功能。</p>
+                            <h3 class="text-2xl font-bold text-gray-800" data-i18n="demo.subtitle">全自动化操作演示</h3>
+                            <p class="text-gray-600 text-lg" data-i18n="demo.description">观看系统如何实现全自动化商品管理、自动发货、智能消息处理等核心功能。</p>
                             <div class="space-y-4">
                                 <div class="flex items-center space-x-3">
                                     <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span>Web端一键配置</span>
+                                    <span data-i18n="demo.features.web">Web端一键配置</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span>全自动商品管理</span>
+                                    <span data-i18n="demo.features.manage">全自动商品管理</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span>智能消息处理</span>
+                                    <span data-i18n="demo.features.message">智能消息处理</span>
                                 </div>
                             </div>
                         </div>
                         <div class="relative rounded-lg overflow-hidden shadow-xl">
                             <video class="w-full" controls poster="images/82b91715850941.png">
                                 <source src="mp4/ba301726479789_20250318_18005034.mp4" type="video/mp4">
-                                您的浏览器不支持视频播放。
+                                <p data-i18n="demo.video.error">您的浏览器不支持视频播放。</p>
                             </video>
                         </div>
                     </div>
@@ -187,18 +187,41 @@
             <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden md:block" aria-label="联系方式">
                 <div class="bg-white rounded-xl shadow-2xl p-6 max-w-xs transform hover:scale-105 transition duration-300">
                     <div class="flex flex-col items-center">
-                        <div class="bg-green-100 rounded-full p-3 mb-4">
-                            <span class="iconify" data-icon="mdi:wechat"></span>
+                        <!-- 微信联系方式 -->
+                        <div class="mb-8">
+                            <div class="bg-green-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-green-600" data-icon="mdi:wechat"></span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.wechat.title">微信（备注：bot）</h3>
+                                <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
+                            </div>
+                            <div class="mb-4">
+                                <img src="images/wechat.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            </div>
+                            <!-- <div class="text-center">
+                                <p class="text-xs text-gray-500" data-i18n="contact.scan">扫码添加好友</p>
+                            </div> -->
                         </div>
-                        <div class="text-center mb-4">
-                            <h3 class="text-lg font-bold mb-2" data-i18n="contact.note">备注: bot</h3>
-                            <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
-                        </div>
-                        <div class="mb-4">
-                            <img src="images/22cb3bc9f60e2c3cd492ec7826d613f.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md">
-                        </div>
-                        <div class="text-center">
-                            <p class="text-xs text-gray-500" data-i18n="contact.scan">扫码添加好友</p>
+                        
+                        <!-- 分隔线 -->
+                        <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
+                        
+                        <!-- Telegram联系方式 -->
+                        <div>
+                            <div class="bg-blue-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-blue-600" data-icon="mdi:telegram"></span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.telegram.title">Telegram</h3>
+                                <p class="text-sm text-gray-600" data-i18n="contact.telegram.hours">24小时在线</p>
+                            </div>
+                            <div class="mb-4">
+                                <a href="https://t.me/aduuuu2133" target="_blank" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg">
+                                    <span class="iconify mr-2 text-xl" data-icon="mdi:telegram"></span>
+                                    <span data-i18n="contact.telegram.join">加入Telegram</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -208,18 +231,41 @@
             <div class="block md:hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 shadow-up-lg py-6 px-4" aria-label="移动端联系方式">
                 <div class="max-w-md mx-auto backdrop-blur-sm bg-white/70 rounded-xl p-6">
                     <div class="flex flex-col items-center">
-                        <div class="bg-green-100 rounded-full p-3 mb-4">
-                            <span class="iconify" data-icon="mdi:wechat"></span>
+                        <!-- 微信联系方式 -->
+                        <div class="mb-8">
+                            <div class="bg-green-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-green-600" data-icon="mdi:wechat"></span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.wechat.title">微信（备注：bot）</h3>
+                                <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
+                            </div>
+                            <div class="mb-4">
+                                <img src="images/wechat.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            </div>
+                            <!-- <div class="text-center">
+                                <p class="text-xs text-gray-500" data-i18n="contact.scan">扫码添加好友</p>
+                            </div> -->
                         </div>
-                        <div class="text-center mb-4">
-                            <h3 class="text-lg font-bold mb-2" data-i18n="contact.note">备注: bot</h3>
-                            <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
-                        </div>
-                        <div class="mb-4">
-                            <img src="images/22cb3bc9f60e2c3cd492ec7826d613f.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md">
-                        </div>
-                        <div class="text-center">
-                            <p class="text-xs text-gray-500" data-i18n="contact.scan">扫码添加好友</p>
+                        
+                        <!-- 分隔线 -->
+                        <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
+                        
+                        <!-- Telegram联系方式 -->
+                        <div>
+                            <div class="bg-blue-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-blue-600" data-icon="mdi:telegram"></span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.telegram.title">Telegram</h3>
+                                <p class="text-sm text-gray-600" data-i18n="contact.telegram.hours">24小时在线</p>
+                            </div>
+                            <div class="mb-4">
+                                <a href="https://t.me/aduuuu2133" target="_blank" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg">
+                                    <span class="iconify mr-2 text-xl" data-icon="mdi:telegram"></span>
+                                    <span data-i18n="contact.telegram.join">加入Telegram</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

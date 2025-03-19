@@ -71,9 +71,30 @@
         "title": "联系我们",
         "note": "备注: bot",
         "hours": "在线时间：9:00 - 21:00",
-        "scan": "扫码添加好友"
+        "scan": "扫码添加好友",
+        "wechat": {
+            "title": "微信"
+        },
+        "telegram": {
+            "title": "Telegram",
+            "hours": "24小时在线",
+            "join": "加入Telegram"
+        }
     },
     "footer": {
         "copyright": "© 2024 GameTrade Bot. All rights reserved."
+    },
+    "demo": {
+        "title": "功能演示",
+        "subtitle": "全自动化操作演示",
+        "description": "观看系统如何实现全自动化商品管理、自动发货、智能消息处理等核心功能。",
+        "features": {
+            "web": "Web端一键配置",
+            "manage": "全自动商品管理",
+            "message": "智能消息处理"
+        },
+        "video": {
+            "error": "您的浏览器不支持视频播放。"
+        }
     }
 } 

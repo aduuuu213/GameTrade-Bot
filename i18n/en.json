@@ -70,10 +70,31 @@
     "contact": {
         "title": "Contact Us",
         "note": "Note: bot",
-        "hours": "Online Hours: 9:00 - 21:00",
-        "scan": "Scan to add friend"
+        "hours": "Online hours: 9:00 - 21:00",
+        "scan": "Scan to add friend",
+        "wechat": {
+            "title": "WeChat"
+        },
+        "telegram": {
+            "title": "Telegram",
+            "hours": "24/7 Online",
+            "join": "Join Telegram"
+        }
     },
     "footer": {
         "copyright": "© 2024 GameTrade Bot. All rights reserved."
+    },
+    "demo": {
+        "title": "Demo",
+        "subtitle": "Automated Operation Demo",
+        "description": "Watch how the system implements automated product management, automatic shipping, and smart message processing.",
+        "features": {
+            "web": "One-click Web Configuration",
+            "manage": "Automated Product Management",
+            "message": "Smart Message Processing"
+        },
+        "video": {
+            "error": "Your browser does not support video playback."
+        }
     }
 } 

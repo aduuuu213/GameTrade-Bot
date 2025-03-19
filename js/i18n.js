@@ -233,4 +233,45 @@ const i18n = {
 // 页面加载完成后初始化国际化
 document.addEventListener('DOMContentLoaded', () => {
     i18n.init();
+});
+
+// 导航栏滚动动画
+let lastScroll = 0;
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+        nav.classList.remove('nav-scrolled', 'nav-hidden');
+        return;
+    }
+    
+    if (currentScroll > lastScroll && !nav.classList.contains('nav-hidden')) {
+        // 向下滚动
+        nav.classList.add('nav-hidden');
+        nav.classList.add('nav-scrolled');
+    } else if (currentScroll < lastScroll && nav.classList.contains('nav-hidden')) {
+        // 向上滚动
+        nav.classList.remove('nav-hidden');
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// 平滑滚动
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 }); 
