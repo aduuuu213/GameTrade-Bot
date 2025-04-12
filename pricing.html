@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO 相关 meta 标签 -->
+        <title>价格方案 - GameTrade Bot | 全自动化游戏交易机器人</title>
+        <meta name="description" content="GameTrade Bot按账号数量提供灵活的价格方案，满足不同规模用户需求，提供全自动化游戏交易服务。">
+        <meta name="keywords" content="游戏交易,自动发货,游戏账号,自动化交易,GameTrade Bot,价格方案">
+        <meta name="author" content="GameTrade Bot">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="theme-color" content="#1a365d">
+        
+        <!-- Open Graph 标签 -->
+        <meta property="og:title" content="价格方案 - GameTrade Bot">
+        <meta property="og:description" content="GameTrade Bot按账号数量提供灵活的价格方案，满足不同规模用户需求。">
+        <meta property="og:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+        <meta property="og:url" content="https://www.gd-bot.com/pricing.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="GameTrade Bot">
+        <meta property="og:locale" content="zh_CN">
+        
+        <!-- Twitter Card 标签 -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="价格方案 - GameTrade Bot">
+        <meta name="twitter:description" content="GameTrade Bot按账号数量提供灵活的价格方案，满足不同规模用户需求。">
+        <meta name="twitter:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+
+        <!-- 规范链接 -->
+        <link rel="canonical" href="https://www.gd-bot.com/pricing.html">
+        
+        <!-- 网站图标 -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+        <link rel="mask-icon" href="/favicon.png" color="#1a365d">
+        <meta name="msapplication-TileColor" content="#1a365d">
+
+        <!-- CSS 引入 -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        
+        <!-- 预加载关键资源 -->
+        <link rel="preload" href="js/i18n.js" as="script">
+        <link rel="preload" href="i18n/zh-CN.json" as="fetch" crossorigin>
+        
+        <!-- 引入 Iconify -->
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js" defer></script>
+        
+        <!-- 结构化数据 -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "GameTrade Bot",
+          "description": "GD全自动化游戏交易机器人，提供24小时自动发货服务",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "100",
+            "priceCurrency": "CNY"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "100"
+          }
+        }
+        </script>
+    </head>
+    <body class="bg-gray-50">
+        <!-- 语言选择器 -->
+        <div class="language-selector">
+            <select id="langSelect">
+                <option value="zh-CN">简体中文</option>
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+
+        <!-- 导航栏 -->
+        <header>
+            <nav class="bg-white shadow-lg fixed w-full z-50" aria-label="主导航">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="flex justify-between h-16">
+                        <div class="flex items-center">
+                            <a href="index.html" class="text-2xl font-bold text-blue-600" data-i18n="brand">GameTrade Bot</a>
+                        </div>
+                        <div class="flex items-center space-x-8">
+                            <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">首页</a>
+                            <a href="index.html#demo" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.demo">演示</a>
+                            <a href="index.html#features" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.features">特点</a>
+                            <a href="pricing.html" class="nav-link text-blue-600 font-medium transition-colors duration-300">价格方案</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- 价格方案横幅 -->
+            <section class="hero-bg text-white pt-32 pb-20" aria-label="价格方案">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <h1 class="text-5xl font-bold mb-6">价格方案</h1>
+                    <p class="text-2xl font-semibold mb-4">灵活定价，按需选择</p>
+                    <p class="text-xl mb-8">根据您的账号数量，提供最合适的价格方案</p>
+                </div>
+            </section>
+
+            <!-- 价格表格 -->
+            <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+                <div class="max-w-4xl mx-auto px-4">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                        <!-- 表格头部 -->
+                        <div class="bg-blue-600 text-white p-6">
+                            <h2 class="text-2xl font-bold text-center">账号数量定价表</h2>
+                        </div>
+                        
+                        <!-- 价格表格 -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="bg-blue-50">
+                                        <th class="py-4 px-6 text-left text-blue-800 font-semibold border-b border-blue-100">账号数量区间</th>
+                                        <th class="py-4 px-6 text-left text-blue-800 font-semibold border-b border-blue-100">基础费用</th>
+                                        <th class="py-4 px-6 text-left text-blue-800 font-semibold border-b border-blue-100">超出部分单价</th>
+                                        <th class="py-4 px-6 text-left text-blue-800 font-semibold border-b border-blue-100">计算公式</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 1-2个账号 -->
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                        <td class="py-4 px-6 border-b border-gray-100">1-2个账号</td>
+                                        <td class="py-4 px-6 border-b border-gray-100 font-semibold text-blue-600">100元</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">不适用</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">固定费用100元</td>
+                                    </tr>
+                                    
+                                    <!-- 3-5个账号 -->
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                        <td class="py-4 px-6 border-b border-gray-100">5个账号</td>
+                                        <td class="py-4 px-6 border-b border-gray-100 font-semibold text-blue-600">200元</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">不适用</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">固定费用200元</td>
+                                    </tr>
+                                    
+                                    <!-- 6-199个账号 -->
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                        <td class="py-4 px-6 border-b border-gray-100">6-199个账号</td>
+                                        <td class="py-4 px-6 border-b border-gray-100 font-semibold text-blue-600">200元</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">10元/账号</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">200 + (账号数-5)×10</td>
+                                    </tr>
+                                    
+                                    <!-- 200-499个账号 -->
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                        <td class="py-4 px-6 border-b border-gray-100">200-499个账号</td>
+                                        <td class="py-4 px-6 border-b border-gray-100 font-semibold text-blue-600">2000元</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">6元/账号</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">2000 + (账号数-200)×6</td>
+                                    </tr>
+                                    
+                                    <!-- 500+个账号 -->
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                        <td class="py-4 px-6 border-b border-gray-100">500+个账号</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">不适用</td>
+                                        <td class="py-4 px-6 border-b border-gray-100 font-semibold text-blue-600">5元/账号</td>
+                                        <td class="py-4 px-6 border-b border-gray-100">2000 + 300×6 + (账号数-500)×5</td>
+                                    </tr>
+                                    
+                                    <!-- 1000+个账号 -->
+                                    <tr class="hover:bg-blue-50 transition-colors duration-200">
+                                        <td class="py-4 px-6">1000+个账号</td>
+                                        <td class="py-4 px-6 font-semibold text-blue-600"></td>
+                                        <td class="py-4 px-6"></td>
+                                        <td class="py-4 px-6">请联系客服获取专属优惠</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 价格计算器 -->
+                    <div class="mt-12 bg-white rounded-xl shadow-xl p-8">
+                        <h3 class="text-xl font-bold text-center mb-6">价格计算器</h3>
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                            <div class="w-full md:w-2/5">
+                                <!-- <label for="accountNumber" class="block text-sm font-medium text-gray-700 mb-1">输入账号数量</label> -->
+                                <input type="number" id="accountNumber" min="1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="请输入账号数量">
+                            </div>
+                            <div class="w-full md:w-1/5 md:self-end md:pb-0.5">
+                                <button id="calculateBtn" class="w-full bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">计算</button>
+                            </div>
+                            <div class="w-full md:w-2/5 md:self-end">
+                                <div id="priceResult" class="bg-blue-50 rounded-lg text-center p-2 md:p-2 hidden">
+                                    <p class="text-base md:text-lg">预估费用: <span id="calculatedPrice" class="font-bold text-blue-600 text-lg md:text-xl">0</span> 元</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 价格说明 -->
+                    <div class="mt-12 bg-white rounded-xl shadow-xl p-8">
+                        <h3 class="text-xl font-bold mb-4">价格说明</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>价格已包含所有功能、代理费、谷歌验证码费用</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>套餐周期为30天，可随时续费延长使用期限</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>200+账号可享受免费功能定制和专属优惠</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>支持微信、支付宝等多种支付方式</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 常见问题 -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-4xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12">常见问题</h2>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-lg font-semibold mb-2">如何选择合适的价格方案？</h3>
+                            <p class="text-gray-600">根据您需要管理的账号数量选择对应的价格方案。如有疑问，可以联系客服为您提供建议。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-lg font-semibold mb-2">价格方案包含哪些功能？</h3>
+                            <p class="text-gray-600">所有价格方案均包含核心功能，包括全自动商品管理、24小时自动发货、智能消息处理等。详细功能可查看首页功能介绍。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-lg font-semibold mb-2">如何进行付款？</h3>
+                            <p class="text-gray-600">我们支持微信、支付宝等多种支付方式。选择方案后，客服会为您提供相应的支付信息。</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-lg font-semibold mb-2">是否提供试用服务？</h3>
+                            <p class="text-gray-600">我们提供功能演示和解答，但暂不提供免费试用。如有需求，可联系客服了解更多详情。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 行动号召 -->
+            <section class="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+                <div class="max-w-4xl mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold mb-6">准备好开始使用 GameTrade Bot 了吗？</h2>
+                    <p class="text-lg mb-8">立即联系我们，获取专业解决方案！</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-4">
+                        <a href="index.html#contact" class="bg-white text-blue-600 hover:bg-blue-50 py-3 px-8 rounded-lg font-medium transition duration-300 shadow-lg">联系客服</a>
+                        <a href="index.html#features" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 py-3 px-8 rounded-lg font-medium transition duration-300">了解更多功能</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 联系方式 -->
+        <aside>
+            <!-- 桌面端浮动版本 -->
+            <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden md:block" aria-label="联系方式">
+                <div class="bg-white rounded-xl shadow-2xl p-6 max-w-xs transform hover:scale-105 transition duration-300">
+                    <div class="flex flex-col items-center">
+                        <!-- 微信联系方式 -->
+                        <div class="mb-8">
+                            <div class="bg-green-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-green-600" data-icon="mdi:wechat"></span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.wechat.title">微信（备注：bot）</h3>
+                                <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
+                            </div>
+                            <div class="mb-4">
+                                <img src="images/wechat.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            </div>
+                        </div>
+                        
+                        <!-- 分隔线 -->
+                        <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
+                        
+                        <!-- Telegram联系方式 -->
+                        <div>
+                            <div class="bg-blue-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-blue-600" data-icon="mdi:telegram"></span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.telegram.title">Telegram</h3>
+                                <p class="text-sm text-gray-600" data-i18n="contact.telegram.hours">24小时在线</p>
+                            </div>
+                            <div class="mb-4">
+                                <a href="https://t.me/aduuuu2133" target="_blank" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg">
+                                    <span class="iconify mr-2 text-xl" data-icon="mdi:telegram"></span>
+                                    <span data-i18n="contact.telegram.join">加入Telegram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 移动端底部版本 -->
+            <div class="block md:hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 shadow-up-lg py-6 px-4" aria-label="移动端联系方式">
+                <div class="max-w-md mx-auto backdrop-blur-sm bg-white/70 rounded-xl p-6">
+                    <div class="flex flex-col items-center">
+                        <!-- 微信联系方式 -->
+                        <div class="mb-8">
+                            <div class="bg-green-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-green-600" data-icon="mdi:wechat"></span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.wechat.title">微信（备注：bot）</h3>
+                                <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
+                            </div>
+                            <div class="mb-4">
+                                <img src="images/wechat.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            </div>
+                        </div>
+                        
+                        <!-- 分隔线 -->
+                        <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
+                        
+                        <!-- Telegram联系方式 -->
+                        <div>
+                            <div class="bg-blue-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-blue-600" data-icon="mdi:telegram"></span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.telegram.title">Telegram</h3>
+                                <p class="text-sm text-gray-600" data-i18n="contact.telegram.hours">24小时在线</p>
+                            </div>
+                            <div class="mb-4">
+                                <a href="https://t.me/aduuuu2133" target="_blank" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg">
+                                    <span class="iconify mr-2 text-xl" data-icon="mdi:telegram"></span>
+                                    <span data-i18n="contact.telegram.join">加入Telegram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 页脚 -->
+        <footer class="bg-gray-800 text-white py-8" aria-label="页脚">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p data-i18n="footer.copyright">© 2024 GameTrade Bot. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- JavaScript 引入 -->
+        <script src="js/i18n.js"></script>
+        <script>
+            // 价格计算器功能
+            document.addEventListener('DOMContentLoaded', function() {
+                const accountInput = document.getElementById('accountNumber');
+                const calculateBtn = document.getElementById('calculateBtn');
+                const priceResult = document.getElementById('priceResult');
+                const calculatedPrice = document.getElementById('calculatedPrice');
+                
+                // 计算价格函数
+                function calculatePrice(accountNum) {
+                    if (accountNum <= 0) return 0;
+                    if (accountNum <= 2) return 100;
+                    if (accountNum <= 5) return 150;
+                    if (accountNum <= 199) return 200 + (accountNum - 5) * 10;
+                    if (accountNum <= 499) return 2000 + (accountNum - 200) * 6;
+                    if (accountNum <= 999) return 2000 + 300 * 6 + (accountNum - 500) * 5;
+                    return '请联系客服获取专属价格';
+                }
+                
+                // 点击计算按钮
+                calculateBtn.addEventListener('click', function() {
+                    const accountNum = parseInt(accountInput.value);
+                    if (!accountNum || accountNum <= 0) {
+                        alert('请输入有效的账号数量');
+                        return;
+                    }
+                    
+                    const price = calculatePrice(accountNum);
+                    calculatedPrice.textContent = price;
+                    priceResult.classList.remove('hidden');
+                });
+                
+                // 输入框按回车键也触发计算
+                accountInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        calculateBtn.click();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
