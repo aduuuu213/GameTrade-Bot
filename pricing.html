@@ -108,8 +108,50 @@
                 </div>
             </section>
 
+            <!-- 价格说明 (移动到最前面) -->
+            <section class="py-12 bg-gradient-to-b from-gray-50 to-white">
+                <div class="max-w-4xl mx-auto px-4">
+                    <!-- 价格说明 -->
+                    <div class="bg-white rounded-xl shadow-xl p-8 border-l-4 border-blue-600">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">价格说明</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>价格已包含所有功能、代理费、谷歌验证码（有限额）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>套餐周期为30天，可随时续费延长使用期限</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>200+账号可享受免费功能定制和专属优惠</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>支持微信、支付宝等多种支付方式</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="font-medium text-green-600">年付优惠：一次性支付12个月享受85折优惠</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
             <!-- 价格表格 -->
-            <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+            <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
                 <div class="max-w-4xl mx-auto px-4">
                     <div class="bg-white rounded-xl shadow-xl overflow-hidden">
                         <!-- 表格头部 -->
@@ -180,13 +222,77 @@
                             </table>
                         </div>
                     </div>
+                    
+                    <!-- 价格表格后的引导信息 -->
+                    <div class="mt-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg shadow-md">
+                        <div class="flex items-center">
+                            <span class="iconify text-3xl text-blue-600 mr-3" data-icon="mdi:information-outline"></span>
+                            <div>
+                                <p class="font-medium text-blue-800">以上价格仅供参考，添加客服微信可获取更多优惠</p>
+                                <p class="text-blue-600 mt-1">备注"bot"，告知账号数量，即可获取专属优惠方案</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 额外优惠信息展示 -->
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-lg shadow-md p-4 border-t-4 border-green-500 transform hover:scale-105 transition duration-300">
+                            <div class="flex justify-center mb-2">
+                                <span class="iconify text-2xl text-green-500" data-icon="mdi:check-circle-outline"></span>
+                            </div>
+                            <h4 class="text-lg font-semibold text-center mb-2">年付优惠</h4>
+                            <p class="text-center text-gray-600">一次性购买12个月服务</p>
+                            <p class="text-center font-bold text-green-600 mt-2">享受8.5折优惠</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md p-4 border-t-4 border-blue-500 transform hover:scale-105 transition duration-300">
+                            <div class="flex justify-center mb-2">
+                                <span class="iconify text-2xl text-blue-500" data-icon="mdi:account-group-outline"></span>
+                            </div>
+                            <h4 class="text-lg font-semibold text-center mb-2">多账号折扣</h4>
+                            <p class="text-center text-gray-600">账号数量越多</p>
+                            <p class="text-center font-bold text-blue-600 mt-2">单价越低</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-md p-4 border-t-4 border-purple-500 transform hover:scale-105 transition duration-300">
+                            <div class="flex justify-center mb-2">
+                                <span class="iconify text-2xl text-purple-500" data-icon="mdi:tag-outline"></span>
+                            </div>
+                            <h4 class="text-lg font-semibold text-center mb-2">限时促销</h4>
+                            <p class="text-center text-gray-600">联系客服了解当前活动</p>
+                            <p class="text-center font-bold text-purple-600 mt-2">专属优惠码</p>
+                        </div>
+                    </div>
+
+                    <!-- 联系客服卡片 -->
+                    <div class="mt-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl shadow-lg p-6 text-white">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-2/3 mb-6 md:mb-0 md:pr-6">
+                                <h3 class="text-xl font-bold mb-3">联系客服获取专属折扣</h3>
+                                <p class="mb-4">扫描右侧二维码，添加客服微信（备注：bot），获取更多优惠信息和专业解答</p>
+                                <div class="flex items-center mt-4">
+                                    <div class="bg-white rounded-full p-2 mr-3">
+                                        <span class="iconify text-blue-600 text-2xl" data-icon="mdi:wechat"></span>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">微信客服</p>
+                                        <p class="text-sm text-blue-100">在线时间：9:00 - 21:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/3 flex justify-center">
+                                <div class="bg-white p-2 rounded-lg">
+                                    <img src="images/wechat.png" alt="微信二维码" class="w-32 h-32 rounded">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- 价格计算器 -->
-                    <div class="mt-12 bg-white rounded-xl shadow-xl p-8">
+                    <div class="bg-white rounded-xl shadow-xl p-8">
                         <h3 class="text-xl font-bold text-center mb-6">价格计算器</h3>
                         <div class="flex flex-col md:flex-row items-center justify-center gap-4">
                             <div class="w-full md:w-2/5">
-                                <!-- <label for="accountNumber" class="block text-sm font-medium text-gray-700 mb-1">输入账号数量</label> -->
                                 <input type="number" id="accountNumber" min="1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="请输入账号数量">
                             </div>
                             <div class="w-full md:w-1/5 md:self-end md:pb-0.5">
@@ -195,40 +301,16 @@
                             <div class="w-full md:w-2/5 md:self-end">
                                 <div id="priceResult" class="bg-blue-50 rounded-lg text-center p-2 md:p-2 hidden">
                                     <p class="text-base md:text-lg">预估费用: <span id="calculatedPrice" class="font-bold text-blue-600 text-lg md:text-xl">0</span> 元</p>
+                                    <p id="saveInfo" class="text-sm text-green-600 mt-1 hidden"></p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- 价格说明 -->
-                    <div class="mt-12 bg-white rounded-xl shadow-xl p-8">
-                        <h3 class="text-xl font-bold mb-4">价格说明</h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span>价格已包含所有功能、代理费、谷歌验证码费用</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span>套餐周期为30天，可随时续费延长使用期限</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span>200+账号可享受免费功能定制和专属优惠</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span>支持微信、支付宝等多种支付方式</span>
-                            </li>
-                        </ul>
+                        <div class="mt-4 flex items-center justify-center">
+                            <div class="flex items-center">
+                                <input type="checkbox" id="yearlyPlan" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                                <label for="yearlyPlan" class="ml-2 text-sm font-medium text-gray-700">计算年付价格（85折优惠）</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -258,15 +340,22 @@
                 </div>
             </section>
 
-            <!-- 行动号召 -->
+            <!-- 行动号召（增强版） -->
             <section class="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
                 <div class="max-w-4xl mx-auto px-4 text-center">
                     <h2 class="text-3xl font-bold mb-6">准备好开始使用 GameTrade Bot 了吗？</h2>
-                    <p class="text-lg mb-8">立即联系我们，获取专业解决方案！</p>
-                    <div class="flex flex-col md:flex-row justify-center gap-4">
-                        <a href="index.html#contact" class="bg-white text-blue-600 hover:bg-blue-50 py-3 px-8 rounded-lg font-medium transition duration-300 shadow-lg">联系客服</a>
-                        <a href="index.html#features" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 py-3 px-8 rounded-lg font-medium transition duration-300">了解更多功能</a>
+                    <p class="text-lg mb-8">立即联系我们，获取专业解决方案，开启自动化交易！</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-4 mb-8">
+                        <a href="index.html#contact" class="bg-white text-blue-600 hover:bg-blue-50 py-4 px-8 rounded-lg font-medium transition duration-300 shadow-lg flex items-center justify-center">
+                            <span class="iconify text-2xl mr-2" data-icon="mdi:wechat"></span>
+                            <span>联系客服咨询</span>
+                        </a>
+                        <a href="index.html#features" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 py-4 px-8 rounded-lg font-medium transition duration-300 flex items-center justify-center">
+                            <span class="iconify text-2xl mr-2" data-icon="mdi:information-outline"></span>
+                            <span>了解更多功能</span>
+                        </a>
                     </div>
+                    <p class="text-blue-200 text-sm">加微信备注"bot"，Telegram 24小时在线</p>
                 </div>
             </section>
         </main>
@@ -372,16 +461,34 @@
                 const calculateBtn = document.getElementById('calculateBtn');
                 const priceResult = document.getElementById('priceResult');
                 const calculatedPrice = document.getElementById('calculatedPrice');
+                const yearlyPlan = document.getElementById('yearlyPlan');
                 
                 // 计算价格函数
-                function calculatePrice(accountNum) {
+                function calculatePrice(accountNum, isYearly) {
                     if (accountNum <= 0) return 0;
-                    if (accountNum <= 2) return 100;
-                    if (accountNum <= 5) return 150;
-                    if (accountNum <= 199) return 200 + (accountNum - 5) * 10;
-                    if (accountNum <= 499) return 2000 + (accountNum - 200) * 6;
-                    if (accountNum <= 999) return 2000 + 300 * 6 + (accountNum - 500) * 5;
-                    return '请联系客服获取专属价格';
+                    
+                    // 计算月费
+                    let monthlyPrice = 0;
+                    if (accountNum <= 2) {
+                        monthlyPrice = 100;
+                    } else if (accountNum <= 5) {
+                        monthlyPrice = 150;
+                    } else if (accountNum <= 199) {
+                        monthlyPrice = 200 + (accountNum - 5) * 10;
+                    } else if (accountNum <= 499) {
+                        monthlyPrice = 2000 + (accountNum - 200) * 6;
+                    } else if (accountNum <= 999) {
+                        monthlyPrice = 2000 + 300 * 6 + (accountNum - 500) * 5;
+                    } else {
+                        return '请联系客服获取专属价格';
+                    }
+                    
+                    // 计算年费（月费 × 12 × 0.85）
+                    if (isYearly) {
+                        return Math.round(monthlyPrice * 12 * 0.85);
+                    }
+                    
+                    return monthlyPrice;
                 }
                 
                 // 点击计算按钮
@@ -392,8 +499,24 @@
                         return;
                     }
                     
-                    const price = calculatePrice(accountNum);
-                    calculatedPrice.textContent = price;
+                    const isYearly = yearlyPlan.checked;
+                    const price = calculatePrice(accountNum, isYearly);
+                    
+                    if (typeof price === 'string') {
+                        calculatedPrice.textContent = price;
+                    } else {
+                        calculatedPrice.textContent = price;
+                        // 如果是年费，添加说明
+                        if (isYearly) {
+                            const monthlyPrice = calculatePrice(accountNum, false);
+                            const savings = monthlyPrice * 12 - price;
+                            document.getElementById('saveInfo').textContent = `(比月付节省 ${savings} 元)`;
+                            document.getElementById('saveInfo').classList.remove('hidden');
+                        } else {
+                            document.getElementById('saveInfo').classList.add('hidden');
+                        }
+                    }
+                    
                     priceResult.classList.remove('hidden');
                 });
                 
