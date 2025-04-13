@@ -119,7 +119,7 @@
                                 <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                 </svg>
-                                <span>价格已包含所有功能、代理费、谷歌验证码（有限额）</span>
+                                <span>价格已包含所有功能、代理费、谷歌打码（有限额）</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,30 +288,6 @@
                         </div>
                     </div>
 
-                    <!-- 价格计算器 -->
-                    <div class="bg-white rounded-xl shadow-xl p-8">
-                        <h3 class="text-xl font-bold text-center mb-6">价格计算器</h3>
-                        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-                            <div class="w-full md:w-2/5">
-                                <input type="number" id="accountNumber" min="1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="请输入账号数量">
-                            </div>
-                            <div class="w-full md:w-1/5 md:self-end md:pb-0.5">
-                                <button id="calculateBtn" class="w-full bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">计算</button>
-                            </div>
-                            <div class="w-full md:w-2/5 md:self-end">
-                                <div id="priceResult" class="bg-blue-50 rounded-lg text-center p-2 md:p-2 hidden">
-                                    <p class="text-base md:text-lg">预估费用: <span id="calculatedPrice" class="font-bold text-blue-600 text-lg md:text-xl">0</span> 元</p>
-                                    <p id="saveInfo" class="text-sm text-green-600 mt-1 hidden"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-4 flex items-center justify-center">
-                            <div class="flex items-center">
-                                <input type="checkbox" id="yearlyPlan" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
-                                <label for="yearlyPlan" class="ml-2 text-sm font-medium text-gray-700">计算年付价格（85折优惠）</label>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -362,83 +338,39 @@
 
         <!-- 联系方式 -->
         <aside>
-            <!-- 桌面端浮动版本 -->
-            <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden md:block" aria-label="联系方式">
+            <!-- 价格计算器浮动组件 -->
+            <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-50 hidden md:block" aria-label="价格计算器">
                 <div class="bg-white rounded-xl shadow-2xl p-6 max-w-xs transform hover:scale-105 transition duration-300">
                     <div class="flex flex-col items-center">
-                        <!-- 微信联系方式 -->
-                        <div class="mb-8">
-                            <div class="bg-green-100 rounded-full p-3 mb-4 flex items-center justify-center">
-                                <span class="iconify text-3xl text-green-600" data-icon="mdi:wechat"></span>
-                            </div>
-                            <div class="text-center mb-4">
-                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.wechat.title">微信（备注：bot）</h3>
-                                <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
-                            </div>
-                            <div class="mb-4">
-                                <img src="images/wechat.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                            </div>
+                        <div class="bg-blue-100 rounded-full p-3 mb-4 flex items-center justify-center">
+                            <span class="iconify text-3xl text-blue-600" data-icon="mdi:calculator"></span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-4 text-center text-gray-800">价格计算器</h3>
+                        
+                        <div class="w-full mb-4">
+                            <input type="number" id="floatAccountNumber" min="1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="请输入账号数量">
                         </div>
                         
-                        <!-- 分隔线 -->
-                        <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
-                        
-                        <!-- Telegram联系方式 -->
-                        <div>
-                            <div class="bg-blue-100 rounded-full p-3 mb-4 flex items-center justify-center">
-                                <span class="iconify text-3xl text-blue-600" data-icon="mdi:telegram"></span>
+                        <div class="w-full mb-4">
+                            <div class="flex items-center mb-3">
+                                <input type="checkbox" id="floatYearlyPlan" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                                <label for="floatYearlyPlan" class="ml-2 text-sm font-medium text-gray-700">计算年付价格（85折）</label>
                             </div>
-                            <div class="text-center mb-4">
-                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.telegram.title">Telegram</h3>
-                                <p class="text-sm text-gray-600" data-i18n="contact.telegram.hours">24小时在线</p>
-                            </div>
-                            <div class="mb-4">
-                                <a href="https://t.me/aduuuu2133" target="_blank" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg">
-                                    <span class="iconify mr-2 text-xl" data-icon="mdi:telegram"></span>
-                                    <span data-i18n="contact.telegram.join">加入Telegram</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 移动端底部版本 -->
-            <div class="block md:hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 shadow-up-lg py-6 px-4" aria-label="移动端联系方式">
-                <div class="max-w-md mx-auto backdrop-blur-sm bg-white/70 rounded-xl p-6">
-                    <div class="flex flex-col items-center">
-                        <!-- 微信联系方式 -->
-                        <div class="mb-8">
-                            <div class="bg-green-100 rounded-full p-3 mb-4 flex items-center justify-center">
-                                <span class="iconify text-3xl text-green-600" data-icon="mdi:wechat"></span>
-                            </div>
-                            <div class="text-center mb-4">
-                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.wechat.title">微信（备注：bot）</h3>
-                                <p class="text-sm text-gray-600" data-i18n="contact.hours">在线时间：9:00 - 21:00</p>
-                            </div>
-                            <div class="mb-4">
-                                <img src="images/wechat.png" alt="微信二维码" class="w-48 h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                            </div>
+                            <button id="floatCalculateBtn" class="w-full bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">计算价格</button>
                         </div>
                         
-                        <!-- 分隔线 -->
-                        <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
+                        <div id="floatPriceResult" class="w-full bg-blue-50 rounded-lg text-center p-3 hidden">
+                            <p class="text-base">预估费用:</p>
+                            <p class="font-bold text-blue-600 text-xl my-1"><span id="floatCalculatedPrice">0</span> 元</p>
+                            <p id="floatSaveInfo" class="text-sm text-green-600 mt-1 hidden"></p>
+                        </div>
                         
-                        <!-- Telegram联系方式 -->
-                        <div>
-                            <div class="bg-blue-100 rounded-full p-3 mb-4 flex items-center justify-center">
-                                <span class="iconify text-3xl text-blue-600" data-icon="mdi:telegram"></span>
-                            </div>
-                            <div class="text-center mb-4">
-                                <h3 class="text-lg font-bold mb-2 text-gray-800" data-i18n="contact.telegram.title">Telegram</h3>
-                                <p class="text-sm text-gray-600" data-i18n="contact.telegram.hours">24小时在线</p>
-                            </div>
-                            <div class="mb-4">
-                                <a href="https://t.me/aduuuu2133" target="_blank" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg">
-                                    <span class="iconify mr-2 text-xl" data-icon="mdi:telegram"></span>
-                                    <span data-i18n="contact.telegram.join">加入Telegram</span>
-                                </a>
-                            </div>
+                        <!-- 免费咨询按钮 -->
+                        <div class="w-full mt-4 pt-4 border-t border-gray-200">
+                            <a href="index.html#contact" class="w-full inline-flex justify-center items-center px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300 shadow-md hover:shadow-lg">
+                                <span class="iconify mr-2 text-xl" data-icon="mdi:wechat"></span>
+                                <span>免费咨询更多优惠</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -524,6 +456,105 @@
                 accountInput.addEventListener('keypress', function(e) {
                     if (e.key === 'Enter') {
                         calculateBtn.click();
+                    }
+                });
+            });
+
+            // 价格计算器功能（浮动版本）
+            document.addEventListener('DOMContentLoaded', function() {
+                // 获取浮动计算器元素
+                const floatAccountInput = document.getElementById('floatAccountNumber');
+                const floatCalculateBtn = document.getElementById('floatCalculateBtn');
+                const floatPriceResult = document.getElementById('floatPriceResult');
+                const floatCalculatedPrice = document.getElementById('floatCalculatedPrice');
+                const floatYearlyPlan = document.getElementById('floatYearlyPlan');
+                const floatSaveInfo = document.getElementById('floatSaveInfo');
+                
+                // 计算价格函数
+                function calculatePrice(accountNum, isYearly) {
+                    if (accountNum <= 0) return 0;
+                    
+                    // 计算月费
+                    let monthlyPrice = 0;
+                    if (accountNum <= 2) {
+                        monthlyPrice = 100;
+                    } else if (accountNum <= 5) {
+                        monthlyPrice = 200;
+                    } else if (accountNum <= 199) {
+                        monthlyPrice = 200 + (accountNum - 5) * 10;
+                    } else if (accountNum <= 499) {
+                        monthlyPrice = 2000 + (accountNum - 200) * 6;
+                    } else if (accountNum <= 999) {
+                        monthlyPrice = 2000 + 300 * 6 + (accountNum - 500) * 5;
+                    } else {
+                        return '请联系客服获取专属价格';
+                    }
+                    
+                    // 计算年费（月费 × 12 × 0.85）
+                    if (isYearly) {
+                        return Math.round(monthlyPrice * 12 * 0.85);
+                    }
+                    
+                    return monthlyPrice;
+                }
+                
+                // 浮动版本计算按钮点击事件
+                floatCalculateBtn.addEventListener('click', function() {
+                    const accountNum = parseInt(floatAccountInput.value);
+                    if (!accountNum || accountNum <= 0) {
+                        alert('请输入有效的账号数量');
+                        return;
+                    }
+                    
+                    const isYearly = floatYearlyPlan.checked;
+                    const price = calculatePrice(accountNum, isYearly);
+                    
+                    if (typeof price === 'string') {
+                        floatCalculatedPrice.textContent = price;
+                        floatSaveInfo.classList.add('hidden');
+                    } else {
+                        floatCalculatedPrice.textContent = price;
+                        // 如果是年费，添加说明
+                        if (isYearly) {
+                            const monthlyPrice = calculatePrice(accountNum, false);
+                            const savings = monthlyPrice * 12 - price;
+                            floatSaveInfo.textContent = `(比月付节省 ${savings} 元)`;
+                            floatSaveInfo.classList.remove('hidden');
+                        } else {
+                            floatSaveInfo.classList.add('hidden');
+                        }
+                    }
+                    
+                    floatPriceResult.classList.remove('hidden');
+                });
+                
+                // 输入框按回车键也触发计算
+                floatAccountInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        floatCalculateBtn.click();
+                    }
+                });
+                
+                // 同步主计算器和浮动计算器
+                const mainAccountInput = document.getElementById('accountNumber');
+                const mainCalculateBtn = document.getElementById('calculateBtn');
+                const mainYearlyPlan = document.getElementById('yearlyPlan');
+                
+                // 主计算器同步到浮动计算器
+                mainCalculateBtn.addEventListener('click', function() {
+                    if (mainAccountInput.value) {
+                        floatAccountInput.value = mainAccountInput.value;
+                        floatYearlyPlan.checked = mainYearlyPlan.checked;
+                        floatCalculateBtn.click();
+                    }
+                });
+                
+                // 浮动计算器同步到主计算器
+                floatCalculateBtn.addEventListener('click', function() {
+                    if (floatAccountInput.value) {
+                        mainAccountInput.value = floatAccountInput.value;
+                        mainYearlyPlan.checked = floatYearlyPlan.checked;
+                        mainCalculateBtn.click();
                     }
                 });
             });
