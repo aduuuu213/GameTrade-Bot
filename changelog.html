@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO 相关 meta 标签 -->
+        <title>功能更新日志 - GameTrade Bot | 全自动化游戏交易机器人</title>
+        <meta name="description" content="GameTrade Bot功能更新日志，记录系统各版本功能迭代和优化，提供全自动化游戏交易服务。">
+        <meta name="keywords" content="游戏交易,功能更新,版本记录,GameTrade Bot,更新日志">
+        <meta name="author" content="GameTrade Bot">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="theme-color" content="#1a365d">
+        
+        <!-- Open Graph 标签 -->
+        <meta property="og:title" content="功能更新日志 - GameTrade Bot">
+        <meta property="og:description" content="GameTrade Bot功能更新日志，记录系统各版本功能迭代和优化。">
+        <meta property="og:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+        <meta property="og:url" content="https://www.gd-bot.com/changelog.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="GameTrade Bot">
+        <meta property="og:locale" content="zh_CN">
+        
+        <!-- Twitter Card 标签 -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="功能更新日志 - GameTrade Bot">
+        <meta name="twitter:description" content="GameTrade Bot功能更新日志，记录系统各版本功能迭代和优化。">
+        <meta name="twitter:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+
+        <!-- 规范链接 -->
+        <link rel="canonical" href="https://www.gd-bot.com/changelog.html">
+        
+        <!-- 网站图标 -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+        <link rel="mask-icon" href="/favicon.png" color="#1a365d">
+        <meta name="msapplication-TileColor" content="#1a365d">
+
+        <!-- CSS 引入 -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        
+        <!-- 预加载关键资源 -->
+        <link rel="preload" href="js/i18n.js" as="script">
+        <link rel="preload" href="i18n/zh-CN.json" as="fetch" crossorigin>
+        
+        <!-- 引入 Iconify -->
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js" defer></script>
+        
+        <!-- 结构化数据 -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "GameTrade Bot",
+          "description": "GD全自动化游戏交易机器人，提供24小时自动发货服务",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "100"
+          }
+        }
+        </script>
+    </head>
+    <body class="bg-gray-50">
+        <!-- 语言选择器 -->
+        <div class="language-selector">
+            <select id="langSelect">
+                <option value="zh-CN">简体中文</option>
+                <option value="en">English</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+
+        <!-- 导航栏 -->
+        <header>
+            <nav class="bg-white shadow-lg fixed w-full z-50" aria-label="主导航">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="flex justify-between h-16">
+                        <div class="flex items-center">
+                            <a href="index.html" class="text-2xl font-bold text-blue-600" data-i18n="brand">GameTrade Bot</a>
+                        </div>
+                        <div class="flex items-center space-x-8">
+                            <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">首页</a>
+                            <a href="index.html#demo" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.demo">演示</a>
+                            <a href="index.html#features" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.features">特点</a>
+                            <a href="pricing.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">价格方案</a>
+                            <a href="changelog.html" class="nav-link text-blue-600 font-medium transition-colors duration-300">更新日志</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- 更新日志横幅 -->
+            <section class="hero-bg text-white pt-32 pb-20" aria-label="更新日志">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <h1 class="text-5xl font-bold mb-6">功能更新日志</h1>
+                    <p class="text-2xl font-semibold mb-4">记录每一次进步</p>
+                    <p class="text-xl mb-8">我们不断优化和完善系统功能，为您提供更好的服务体验</p>
+                </div>
+            </section>
+
+            <!-- 更新日志内容 -->
+            <section class="py-16 bg-white">
+                <div class="max-w-4xl mx-auto px-4">
+                    <div class="space-y-12">
+                        <!-- 版本 1.0.4 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <span class="text-blue-600 text-2xl mr-4">
+                                    <span class="iconify" data-icon="mdi:flag-variant"></span>
+                                </span>
+                                <h2 class="text-2xl font-bold text-blue-800">2025年4月23日 - v1.0.4</h2>
+                            </div>
+                            <div class="space-y-4 pl-4 border-l-4 border-blue-200">
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-3">商品点赞功能</h3>
+                                    <p class="text-gray-600">新增两种点赞模式，提升商品曝光和信任度</p>
+                                    <ul class="mt-3 space-y-2 text-gray-600">
+                                        <li class="flex items-start">
+                                          
+                                            <span>模式一：出品后自动调用账号进行点赞，商品上架后触发</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            
+                                            <span>模式二：对设置的用户主页商品进行批量点赞，每日触发</span>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">互动增强</span>
+                                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">曝光优化</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 版本 1.0.3 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <span class="text-blue-600 text-2xl mr-4">
+                                    <span class="iconify" data-icon="mdi:flag-variant"></span>
+                                </span>
+                                <h2 class="text-2xl font-bold text-blue-800">2025年3月10日 - v1.0.3</h2>
+                            </div>
+                            <div class="space-y-4 pl-4 border-l-4 border-blue-200">
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-3">余额转移新增刷销量模式</h3>
+                                    <p class="text-gray-600">小号余额自动转移至大号，模拟正常交易刷好评，根据设定的商品价格，分多笔交易直至余额不足</p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">自动化</span>
+                                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">销量提升</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-3">批量下架功能</h3>
+                                    <p class="text-gray-600">采集账号历史遗留的上架商品，根据规则将落后当前市场价格的商品批量下架</p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">批量操作</span>
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">价格优化</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 版本 1.0.2 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <span class="text-blue-600 text-2xl mr-4">
+                                    <span class="iconify" data-icon="mdi:flag-variant"></span>
+                                </span>
+                                <h2 class="text-2xl font-bold text-blue-800">2024年9月16日 - v1.0.2</h2>
+                            </div>
+                            <div class="space-y-4 pl-4 border-l-4 border-blue-200">
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-3">浮动聊天框</h3>
+                                    <p class="text-gray-600">多账号可同时登录，协同处理消息</p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">UI优化</span>
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">多账号协作</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 版本 1.0.1 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <span class="text-blue-600 text-2xl mr-4">
+                                    <span class="iconify" data-icon="mdi:flag-variant"></span>
+                                </span>
+                                <h2 class="text-2xl font-bold text-blue-800">2024年6月7日 - v1.0.1</h2>
+                            </div>
+                            <div class="space-y-4 pl-4 border-l-4 border-blue-200">
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-3">余额自动转移</h3>
+                                    <p class="text-gray-600">余额自动转移到指定大号（根据小号余额，大号上架商品，小号自动购买）</p>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">自动化</span>
+                                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">资金管理</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 版本 1.0.0 -->
+                        <div class="bg-gradient-to-r from-blue-50 to-white p-8 rounded-xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <span class="text-blue-600 text-2xl mr-4">
+                                    <span class="iconify" data-icon="mdi:rocket-launch"></span>
+                                </span>
+                                <h2 class="text-2xl font-bold text-blue-800">2024年5月16日 - v1.0.0</h2>
+                            </div>
+                            <div class="space-y-4 pl-4 border-l-4 border-blue-200">
+                                <div class="bg-white p-6 rounded-lg shadow-md relative overflow-hidden">
+                                    <div class="absolute top-0 right-0 bg-blue-600 text-white px-3 py-1 text-sm font-bold transform rotate-0 translate-x-2 -translate-y-0">
+                                        首发版本
+                                    </div>
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-3">系统正式发布</h3>
+                                    <p class="text-gray-600">GameTrade Bot 1.0 版本正式发布，包含以下核心功能：</p>
+                                    <ul class="mt-3 space-y-2 text-gray-600">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span>商品全自动上下架、智能刷新</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span>24小时自动发货</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span>消息中台集中处理</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            <span>第三方谷歌验证码识别服务</span>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-4 flex flex-wrap gap-2">
+                                        <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">首次发布</span>
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">核心功能</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 版本规划 -->
+            <section class="py-16 bg-gray-50">
+                <div class="max-w-4xl mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12">未来版本规划</h2>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <span class="text-blue-600 font-bold">1</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold">多平台整合</h3>
+                                    <p class="text-gray-600 mt-1">支持更多游戏交易平台，实现跨平台数据同步和自动化管理</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <span class="text-blue-600 font-bold">2</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold">AI智能决策引擎</h3>
+                                    <p class="text-gray-600 mt-1">通过AI分析市场数据，自动调整商品价格策略，最大化销售收益</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <span class="text-blue-600 font-bold">3</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold">移动端应用</h3>
+                                    <p class="text-gray-600 mt-1">开发移动端应用，随时随地管理您的游戏交易业务</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="bg-gray-800 text-white py-8" aria-label="页脚">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p data-i18n="footer.copyright">© 2024-2025 GameTrade Bot. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- JavaScript 引入 -->
+        <script src="js/i18n.js"></script>
+    </body>
+</html>
