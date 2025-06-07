@@ -47,6 +47,34 @@
         <!-- 引入 Iconify -->
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js" defer></script>
         
+        <!-- 设备检测和自动跳转脚本 -->
+        <script>
+            (function() {
+                // 检测是否为移动设备
+                function isMobileDevice() {
+                    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+                           (window.innerWidth <= 768);
+                }
+                
+                // 检测触摸设备
+                function isTouchDevice() {
+                    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+                }
+                
+                // 检查是否是从桌面版手动跳转的
+                function isManualSwitch() {
+                    return sessionStorage.getItem('manualSwitch') === 'true';
+                }
+                
+                // 如果是移动设备且不是手动切换，则跳转到移动端
+                if ((isMobileDevice() || (isTouchDevice() && window.innerWidth <= 1024)) && 
+                    !isManualSwitch()) {
+                    sessionStorage.setItem('autoRedirect', 'true');
+                    window.location.href = 'mobile.html';
+                }
+            })();
+        </script>
+        
         <!-- 结构化数据 -->
         <script type="application/ld+json">
         {
