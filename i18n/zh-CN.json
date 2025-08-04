@@ -1,13 +1,13 @@
 {
-    "brand": "GameTrade Bot",
+    "brand": "GameHub Bot",
     "nav": {
         "demo": "演示",
         "features": "特点"
     },
     "hero": {
-        "title": "GameTrade Bot",
+        "title": "GameHub Bot",
         "subtitle": "全自动化贩卖",
-        "description": "Web端配置 · 全自动商品管理 · 24小时无人值守 · 智能决策系统",
+        "description": "多平台支持 · Web端配置 · 全自动商品管理 · 24小时无人值守 · 智能决策系统",
         "cta": "立即体验"
     },
     "features": {
@@ -82,7 +82,7 @@
         }
     },
     "footer": {
-        "copyright": "© 2024 GameTrade Bot. All rights reserved."
+        "copyright": "© 2024 GameHub Bot. All rights reserved."
     },
     "demo": {
         "title": "功能演示",

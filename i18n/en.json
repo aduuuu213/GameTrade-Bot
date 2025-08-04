@@ -1,13 +1,13 @@
 {
-    "brand": "GameTrade Bot",
+    "brand": "GameHub Bot",
     "nav": {
         "demo": "Demo",
         "features": "Features"
     },
     "hero": {
-        "title": "GameTrade Bot",
+        "title": "GameHub Bot",
         "subtitle": "Automated Trading",
-        "description": "Web Configuration · Automated Product Management · 24/7 Operation · Smart Decision System",
+        "description": "Multi-Platform Support · Web Configuration · Automated Product Management · 24/7 Operation · Smart Decision System",
         "cta": "Get Started"
     },
     "features": {
@@ -82,7 +82,7 @@
         }
     },
     "footer": {
-        "copyright": "© 2024 GameTrade Bot. All rights reserved."
+        "copyright": "© 2024 GameHub Bot. All rights reserved."
     },
     "demo": {
         "title": "Demo",

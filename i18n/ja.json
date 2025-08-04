@@ -1,13 +1,13 @@
 {
-    "brand": "GameTrade Bot",
+    "brand": "GameHub Bot",
     "nav": {
         "demo": "デモ",
         "features": "特徴"
     },
     "hero": {
-        "title": "GameTrade Bot",
+        "title": "GameHub Bot",
         "subtitle": "自動取引",
-        "description": "Web設定 · 商品自動管理 · 24時間無人運営 · スマート決済システム",
+        "description": "マルチプラットフォーム対応 · Web設定 · 商品自動管理 · 24時間無人運営 · スマート決済システム",
         "cta": "今すぐ始める"
     },
     "features": {
@@ -82,7 +82,7 @@
         }
     },
     "footer": {
-        "copyright": "© 2024 GameTrade Bot. All rights reserved."
+        "copyright": "© 2024 GameHub Bot. All rights reserved."
     },
     "demo": {
         "title": "デモ",
