@@ -49,43 +49,223 @@
         
         <!-- 移动端专用样式 -->
         <style>
-            /* 基础布局 */
+            /* 全局优化 */
+            * {
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            body {
+                overscroll-behavior: none;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* 基础布局增强 */
             .hero-mobile {
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                min-height: 100vh;
+                min-height: calc(100vh - 60px);
+                display: flex;
+                align-items: center;
+                padding-top: 80px;
+                padding-bottom: 40px;
             }
+            
+            /* 功能卡片增强 */
             .feature-card-mobile {
                 backdrop-filter: blur(10px);
                 border: 1px solid rgba(255, 255, 255, 0.2);
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
             }
+            
+            .feature-card-mobile::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+                transition: left 0.5s;
+            }
+            
             .feature-card-mobile:active {
                 transform: scale(0.98);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             }
+            
+            .feature-card-mobile:active::before {
+                left: 100%;
+            }
+            
+            /* 按钮增强 */
             .btn-mobile {
                 min-height: 56px;
-                font-size: 18px;
+                font-size: 17px;
                 font-weight: 600;
-                transition: all 0.2s ease;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 touch-action: manipulation;
+                position: relative;
+                overflow: hidden;
+                letter-spacing: 0.3px;
             }
+            
+            .btn-mobile::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                transform: translate(-50%, -50%);
+                transition: width 0.6s, height 0.6s;
+            }
+            
             .btn-mobile:active {
                 transform: scale(0.96);
             }
+            
+            .btn-mobile:active::after {
+                width: 300px;
+                height: 300px;
+            }
+            
+            /* 导航栏优化 */
+            header {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            header.nav-hidden {
+                transform: translateY(-100%);
+            }
+            
+            /* 导航栏滚动效果 */
+            header.scrolled {
+                box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+            }
+            
+            /* 菜单按钮优化 */
+            .menu-btn {
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transition: all 0.3s ease;
+            }
+            
+            .menu-btn:active {
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(0.95);
+            }
+            
+            /* 移动端菜单优化 */
+            #mobileMenu {
+                background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+                backdrop-filter: blur(20px);
+                border-radius: 0 0 20px 20px;
+                margin: 0 -1rem;
+                padding: 1rem 1rem 1.5rem;
+                animation: slideDown 0.3s ease-out;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            }
+            
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            /* 菜单链接样式 */
+            .menu-link {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 12px;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .menu-link::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                transition: left 0.5s;
+            }
+            
+            .menu-link:active {
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(0.98);
+            }
+            
+            .menu-link:active::before {
+                left: 100%;
+            }
+            
+            /* 特殊高亮链接 */
+            .menu-link-highlight {
+                background: rgba(255, 255, 255, 0.25);
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                font-weight: 600;
+            }
+            
+            /* 语言选择器容器 */
+            .lang-selector-container {
+                background: rgba(255, 255, 255, 0.15);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 12px;
+                padding: 1rem;
+            }
+            
+            /* 粘性按钮优化 */
             .sticky-contact {
                 position: fixed;
-                bottom: 20px;
-                left: 20px;
-                right: 20px;
+                bottom: 0;
+                left: 0;
+                right: 0;
                 z-index: 50;
+                padding: 12px 16px 16px;
+                background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 70%, transparent 100%);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
+            
+            .contact-button {
+                box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+                transition: all 0.3s ease;
+            }
+            
+            .contact-button:active {
+                transform: scale(0.98);
+                box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+            }
+            
+            /* 价格卡片增强 */
+            .price-card {
+                transition: all 0.3s ease;
+                position: relative;
+            }
+            
+            .price-card:active {
+                transform: translateY(-4px);
             }
             
             /* 移动端优化 */
             @media (max-width: 640px) {
                 body {
-                    -webkit-text-size-adjust: none;
-                    text-size-adjust: none;
+                    -webkit-text-size-adjust: 100%;
+                    text-size-adjust: 100%;
                 }
                 
                 /* 防止iOS缩放 */
@@ -93,22 +273,25 @@
                     font-size: 16px !important;
                 }
                 
-                /* 改善触摸体验 */
-                a, button {
-                    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-                    tap-highlight-color: rgba(0, 0, 0, 0.1);
+                /* 优化文本可读性 */
+                p, li {
+                    line-height: 1.7;
+                }
+                
+                h1, h2, h3 {
+                    line-height: 1.3;
                 }
             }
             
-            /* 加载动画 */
+            /* 加载动画增强 */
             .fade-in {
-                animation: fadeIn 0.6s ease-out;
+                animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             }
             
             @keyframes fadeIn {
                 from { 
                     opacity: 0; 
-                    transform: translateY(20px); 
+                    transform: translateY(30px);
                 }
                 to { 
                     opacity: 1; 
@@ -116,18 +299,109 @@
                 }
             }
             
-            /* 脉冲动画 */
+            /* 渐入动画 - 延迟 */
+            .fade-in-delay-1 {
+                animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+            }
+            
+            .fade-in-delay-2 {
+                animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+            }
+            
+            .fade-in-delay-3 {
+                animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+            }
+            
+            .fade-in-delay-4 {
+                animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+            }
+            
+            .fade-in-delay-5 {
+                animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+            }
+            
+            /* 脉冲动画增强 */
             .pulse-glow {
-                animation: pulseGlow 2s infinite;
+                animation: pulseGlow 2.5s ease-in-out infinite;
             }
             
             @keyframes pulseGlow {
                 0%, 100% { 
-                    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); 
+                    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+                    transform: scale(1);
                 }
                 50% { 
-                    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); 
+                    box-shadow: 0 0 35px rgba(59, 130, 246, 0.7);
+                    transform: scale(1.02);
                 }
+            }
+            
+            /* 滚动指示器 */
+            .scroll-indicator {
+                animation: bounce 2s infinite;
+            }
+            
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-10px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+            
+            /* 模态框动画 */
+            .modal-enter {
+                animation: modalFadeIn 0.3s ease-out;
+            }
+            
+            @keyframes modalFadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            
+            .modal-content-enter {
+                animation: modalSlideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            @keyframes modalSlideUp {
+                from {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            
+            /* 安全区域适配 */
+            @supports (padding: max(0px)) {
+                header {
+                    padding-top: max(12px, env(safe-area-inset-top));
+                }
+                
+                .sticky-contact {
+                    padding-bottom: max(16px, env(safe-area-inset-bottom));
+                }
+                
+                footer {
+                    padding-bottom: max(128px, calc(128px + env(safe-area-inset-bottom)));
+                }
+            }
+            
+            /* 改善滚动性能 */
+            .feature-card-mobile,
+            .btn-mobile,
+            .price-card {
+                will-change: transform;
             }
         </style>
         
@@ -159,25 +433,56 @@
     </head>
     <body class="bg-gray-50">
         <!-- 导航栏 - 移动端优化 -->
-        <header class="fixed top-0 w-full z-40 bg-white/90 backdrop-blur-md shadow-sm">
-            <nav class="px-4 py-3">
+        <header class="fixed top-0 w-full z-40 shadow-lg">
+            <nav class="px-4 py-4">
                 <div class="flex justify-between items-center">
-                    <div class="text-xl font-bold text-blue-600">GameTrade Bot</div>
-                    <button onclick="toggleMenu()" class="p-2 text-gray-600">
-                        <span class="iconify text-2xl" data-icon="mdi:menu"></span>
+                    <div class="flex items-center">
+                        <div class="bg-white/20 rounded-full p-2 mr-3 backdrop-blur-sm">
+                            <span class="iconify text-white text-xl" data-icon="mdi:gamepad-variant"></span>
+                        </div>
+                        <div class="text-xl font-bold text-white drop-shadow-md">GameHub Bot</div>
+                    </div>
+                    <button onclick="toggleMenu()" class="menu-btn p-2 rounded-xl">
+                        <span class="iconify text-2xl text-white" data-icon="mdi:menu"></span>
                     </button>
                 </div>
                 <!-- 移动端菜单 -->
-                <div id="mobileMenu" class="hidden mt-4 pb-4 border-t border-gray-200">
-                    <a href="#features" class="block py-3 text-gray-700 font-medium">核心功能</a>
-                    <a href="pricing.html" class="block py-3 text-gray-700 font-medium">价格方案</a>
-                    <a href="#contact" class="block py-3 text-blue-600 font-medium">立即咨询</a>
-                    <div class="py-3 border-t border-gray-100 mt-2">
-                        <label class="text-gray-600 text-sm block mb-2">语言 / Language</label>
-                        <select id="langSelect" class="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white text-gray-700">
-                            <option value="zh-CN">简体中文</option>
-                            <option value="en">English</option>
-                            <option value="ja">日本語</option>
+                <div id="mobileMenu" class="hidden mt-4">
+                    <div class="space-y-2 mb-3">
+                        <a href="#features" class="menu-link block py-3 px-4 text-white font-medium">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:star-outline"></span>
+                                核心功能
+                            </span>
+                        </a>
+                        <a href="pricing-mobile.html" class="menu-link block py-3 px-4 text-white font-medium">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:currency-cny"></span>
+                                价格方案
+                            </span>
+                        </a>
+                        <a href="changelog.html" class="menu-link block py-3 px-4 text-white font-medium">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:update"></span>
+                                更新日志
+                            </span>
+                        </a>
+                        <a href="#contact" class="menu-link menu-link-highlight block py-3 px-4 text-white font-bold">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:message-text"></span>
+                                立即咨询
+                            </span>
+                        </a>
+                    </div>
+                    <div class="lang-selector-container">
+                        <label class="text-white text-sm block mb-2 font-medium">
+                            <span class="iconify mr-1" data-icon="mdi:translate"></span>
+                            语言 / Language
+                        </label>
+                        <select id="langSelect" class="w-full px-3 py-2.5 border border-white/30 rounded-lg bg-white/20 text-white font-medium backdrop-blur-sm">
+                            <option value="zh-CN" class="bg-gray-800">简体中文</option>
+                            <option value="en" class="bg-gray-800">English</option>
+                            <option value="ja" class="bg-gray-800">日本語</option>
                         </select>
                     </div>
                 </div>
@@ -185,174 +490,271 @@
         </header>
 
         <!-- 主横幅 - 移动端优化 -->
-        <section class="hero-mobile text-white px-4 pt-24 pb-16">
-            <div class="text-center max-w-sm mx-auto fade-in">
-                <h1 class="text-3xl font-bold mb-4">GameHub Bot</h1>
-                <p class="text-xl font-semibold mb-3">全自动化贩卖</p>
-                <p class="text-base mb-8 text-blue-100">多平台支持 · 24小时无人值守 · 智能决策系统</p>
-                <a href="#contact" class="btn-mobile bg-white text-blue-600 px-8 py-4 rounded-2xl inline-block hover:bg-blue-50 transition-colors duration-300 pulse-glow">
-                    立即体验
-                </a>
+        <section class="hero-mobile text-white px-5">
+            <div class="text-center max-w-md mx-auto">
+                <div class="fade-in">
+                    <h1 class="text-4xl font-bold mb-5 leading-tight drop-shadow-lg">GameHub Bot</h1>
+                    <p class="text-2xl font-semibold mb-4 drop-shadow-md">全自动化贩卖</p>
+                    <p class="text-base mb-10 text-white px-4 leading-relaxed opacity-90">多平台支持 · 24小时无人值守 · 智能决策系统</p>
+                </div>
+                <div class="fade-in-delay-1">
+                    <a href="#contact" class="btn-mobile bg-white text-blue-600 px-10 py-4 rounded-2xl inline-block hover:bg-blue-50 transition-colors duration-300 pulse-glow shadow-xl">
+                        <span class="flex items-center justify-center">
+                            <span class="iconify mr-2" data-icon="mdi:rocket-launch"></span>
+                            立即体验
+                        </span>
+                    </a>
+                </div>
+                <!-- 滚动指示器 -->
+                <div class="mt-12 scroll-indicator">
+                    <a href="#features" class="inline-block opacity-60">
+                        <span class="iconify text-3xl" data-icon="mdi:chevron-down"></span>
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- 核心功能 - 移动端优化 -->
-        <section id="features" class="py-12 px-4 bg-gradient-to-b from-blue-50 to-white">
-            <div class="max-w-sm mx-auto">
-                <h2 class="text-2xl font-bold text-center mb-8 text-gray-800">核心功能</h2>
+        <section id="features" class="py-16 px-5 bg-gradient-to-b from-blue-50 to-white scroll-mt-20">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-3">核心功能</h2>
+                    <p class="text-gray-600">一站式游戏交易自动化解决方案</p>
+                </div>
                 
                 <!-- 功能卡片 -->
-                <div class="space-y-6">
-                    <div class="feature-card-mobile bg-white/80 p-6 rounded-2xl shadow-lg">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-blue-100 rounded-full p-3 mr-4">
-                                <span class="iconify text-2xl text-blue-600" data-icon="mdi:cog-outline"></span>
+                <div class="space-y-5">
+                    <div class="feature-card-mobile bg-white/90 p-6 rounded-2xl shadow-lg fade-in-delay-1">
+                        <div class="flex items-start mb-3">
+                            <div class="bg-blue-500 rounded-full p-3 mr-4 flex-shrink-0 shadow-md">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:cog-outline"></span>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-800">全自动商品管理</h3>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">全自动商品管理</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">智能上架、库存监控、自动补货</p>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm">智能上架、库存监控、自动补货</p>
                     </div>
 
-                    <div class="feature-card-mobile bg-white/80 p-6 rounded-2xl shadow-lg">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-green-100 rounded-full p-3 mr-4">
-                                <span class="iconify text-2xl text-green-600" data-icon="mdi:truck-delivery-outline"></span>
+                    <div class="feature-card-mobile bg-white/90 p-6 rounded-2xl shadow-lg fade-in-delay-2">
+                        <div class="flex items-start mb-3">
+                            <div class="bg-green-500 rounded-full p-3 mr-4 flex-shrink-0 shadow-md">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:truck-delivery-outline"></span>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-800">24小时自动发货</h3>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">24小时自动发货</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">即时响应、自动发货、无需人工干预</p>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm">即时响应、自动发货、无需人工干预</p>
                     </div>
 
-                    <div class="feature-card-mobile bg-white/80 p-6 rounded-2xl shadow-lg">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-purple-100 rounded-full p-3 mr-4">
-                                <span class="iconify text-2xl text-purple-600" data-icon="mdi:message-processing-outline"></span>
+                    <div class="feature-card-mobile bg-white/90 p-6 rounded-2xl shadow-lg fade-in-delay-3">
+                        <div class="flex items-start mb-3">
+                            <div class="bg-purple-500 rounded-full p-3 mr-4 flex-shrink-0 shadow-md">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:message-processing-outline"></span>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-800">智能消息处理</h3>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">智能消息处理</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">自动回复、智能客服、高效沟通</p>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm">自动回复、智能客服、高效沟通</p>
                     </div>
 
-                    <div class="feature-card-mobile bg-white/80 p-6 rounded-2xl shadow-lg">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-indigo-100 rounded-full p-3 mr-4">
-                                <span class="iconify text-2xl text-indigo-600" data-icon="mdi:account-group"></span>
+                    <div class="feature-card-mobile bg-white/90 p-6 rounded-2xl shadow-lg fade-in-delay-4">
+                        <div class="flex items-start mb-3">
+                            <div class="bg-indigo-500 rounded-full p-3 mr-4 flex-shrink-0 shadow-md">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:account-group"></span>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-800">多平台账号管理</h3>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">多平台账号管理</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">支持GT平台(gametrade.jp)、GC平台(gameclub.jp)等</p>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm">支持GT平台(gametrade.jp)、GC平台(gameclub.jp)等</p>
                     </div>
 
-                    <div class="feature-card-mobile bg-white/80 p-6 rounded-2xl shadow-lg">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-yellow-100 rounded-full p-3 mr-4">
-                                <span class="iconify text-2xl text-yellow-600" data-icon="mdi:chart-timeline"></span>
+                    <div class="feature-card-mobile bg-white/90 p-6 rounded-2xl shadow-lg fade-in-delay-5">
+                        <div class="flex items-start mb-3">
+                            <div class="bg-yellow-500 rounded-full p-3 mr-4 flex-shrink-0 shadow-md">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:chart-timeline"></span>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-800">GT智能出品策略</h3>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">GT智能出品策略</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed">刷新模式、排名检测、智能优化三重策略</p>
+                            </div>
                         </div>
-                        <p class="text-gray-600 text-sm">刷新模式、排名检测、智能优化三重策略</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 价格方案预览 - 移动端优化 -->
-        <section class="py-12 px-4 bg-white">
-            <div class="max-w-sm mx-auto text-center">
-                <h2 class="text-2xl font-bold mb-8 text-gray-800">价格方案</h2>
+        <section class="py-16 px-5 bg-white scroll-mt-20">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-3">价格方案</h2>
+                    <p class="text-gray-600">灵活选择，按需付费</p>
+                </div>
                 
                 <!-- 价格卡片 -->
-                <div class="space-y-4">
-                    <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6">
-                        <h3 class="text-lg font-bold text-blue-600 mb-2">基础版</h3>
-                        <div class="text-3xl font-bold text-gray-800 mb-2">100元<span class="text-lg text-gray-600">/月</span></div>
-                        <p class="text-gray-600 text-sm mb-4">1-2个账号</p>
-                        <ul class="text-left text-sm text-gray-600 space-y-1">
-                            <li>✓ 全自动商品管理</li>
-                            <li>✓ 24小时自动发货</li>
-                            <li>✓ 智能消息处理</li>
+                <div class="space-y-5">
+                    <div class="price-card bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-2xl p-6 shadow-lg">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-1">基础版</h3>
+                                <p class="text-gray-600 text-sm">适合小型商户</p>
+                            </div>
+                            <div class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold shadow-md">推荐</div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-4xl font-bold text-blue-800">
+                                100<span class="text-lg text-gray-600">元/月</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-1">1-2个账号</p>
+                        </div>
+                        <ul class="text-left text-sm text-gray-700 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <span class="iconify text-blue-700 mr-2" data-icon="mdi:check-circle"></span>
+                                全自动商品管理
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-blue-700 mr-2" data-icon="mdi:check-circle"></span>
+                                24小时自动发货
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-blue-700 mr-2" data-icon="mdi:check-circle"></span>
+                                智能消息处理
+                            </li>
                         </ul>
                     </div>
                     
-                    <div class="bg-green-50 border border-green-200 rounded-2xl p-6">
-                        <h3 class="text-lg font-bold text-green-600 mb-2">专业版</h3>
-                        <div class="text-3xl font-bold text-gray-800 mb-2">200元<span class="text-lg text-gray-600">/月</span></div>
-                        <p class="text-gray-600 text-sm mb-4">5个账号</p>
-                        <ul class="text-left text-sm text-gray-600 space-y-1">
-                            <li>✓ 基础版全部功能</li>
-                            <li>✓ 高级数据分析</li>
-                            <li>✓ 优先技术支持</li>
+                    <div class="price-card bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-300 rounded-2xl p-6 shadow-lg">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-1">专业版</h3>
+                                <p class="text-gray-600 text-sm">适合中型商户</p>
+                            </div>
+                            <div class="bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold shadow-md">热门</div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-4xl font-bold text-green-800">
+                                200<span class="text-lg text-gray-600">元/月</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-1">5个账号</p>
+                        </div>
+                        <ul class="text-left text-sm text-gray-700 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <span class="iconify text-green-700 mr-2" data-icon="mdi:check-circle"></span>
+                                基础版全部功能
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-green-700 mr-2" data-icon="mdi:check-circle"></span>
+                                数据分析免费
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-green-700 mr-2" data-icon="mdi:check-circle"></span>
+                                优先技术支持
+                            </li>
                         </ul>
                     </div>
                 </div>
                 
-                <div class="mt-8">
-                    <a href="pricing.html" class="btn-mobile bg-blue-600 text-white px-8 py-4 rounded-2xl inline-block hover:bg-blue-700 transition-colors duration-300">
-                        查看完整价格
+                <div class="mt-8 text-center">
+                    <a href="pricing-mobile.html" class="btn-mobile bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-2xl inline-block shadow-xl">
+                        <span class="flex items-center justify-center">
+                            <span class="iconify mr-2" data-icon="mdi:currency-cny"></span>
+                            查看完整价格
+                        </span>
                     </a>
+                    <p class="text-sm text-gray-500 mt-4">年付享85折优惠</p>
                 </div>
             </div>
         </section>
 
         <!-- 粘性联系按钮 -->
         <div class="sticky-contact">
-            <div class="bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl shadow-2xl p-4 text-white">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center">
-                        <div class="bg-white/20 rounded-full p-2 mr-3">
-                            <span class="iconify text-xl" data-icon="mdi:wechat"></span>
+            <div class="contact-button bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 rounded-2xl p-1">
+                <div class="bg-white rounded-2xl p-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center flex-1">
+                            <div class="bg-gradient-to-br from-green-400 to-blue-500 rounded-full p-3 mr-3">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:wechat"></span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-base">立即咨询</p>
+                                <p class="text-xs text-gray-600 flex items-center">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full mr-1 animate-pulse"></span>
+                                    专业客服在线
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="font-bold text-sm">立即咨询</p>
-                            <p class="text-xs text-green-100">专业客服在线</p>
-                        </div>
+                        <button onclick="showContact()" class="btn-mobile bg-gradient-to-r from-green-500 to-blue-500 text-white px-5 py-3 rounded-xl font-bold text-sm shadow-lg whitespace-nowrap">
+                            联系我们
+                        </button>
                     </div>
-                    <button onclick="showContact()" class="bg-white text-green-600 px-4 py-2 rounded-xl font-bold text-sm hover:bg-green-50 transition-colors duration-300">
-                        联系我们
-                    </button>
                 </div>
             </div>
         </div>
 
         <!-- 联系方式弹窗 -->
-        <div id="contactModal" class="hidden fixed inset-0 z-50 bg-black/50">
-            <div class="flex items-center justify-center min-h-screen p-4">
-                <div class="bg-white rounded-2xl p-6 max-w-sm w-full">
+        <div id="contactModal" class="hidden fixed inset-0 z-50 bg-black/60 modal-enter backdrop-blur-sm">
+            <div class="flex items-center justify-center min-h-screen p-5" onclick="hideContact()">
+                <div class="bg-white rounded-3xl p-8 max-w-sm w-full modal-content-enter shadow-2xl" onclick="event.stopPropagation()">
+                    <!-- 关闭按钮 -->
+                    <div class="flex justify-end mb-4">
+                        <button onclick="hideContact()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                            <span class="iconify text-2xl" data-icon="mdi:close"></span>
+                        </button>
+                    </div>
+                    
                     <div class="text-center">
-                        <h3 class="text-xl font-bold mb-4 text-gray-800">联系我们</h3>
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">联系我们</h3>
+                        <p class="text-gray-600 mb-6">选择您方便的联系方式</p>
                         
                         <!-- 微信联系 -->
-                        <div class="mb-6">
-                            <div class="bg-green-100 rounded-full p-3 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                <span class="iconify text-2xl text-green-600" data-icon="mdi:wechat"></span>
+                        <div class="mb-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6">
+                            <div class="bg-gradient-to-br from-green-400 to-green-600 rounded-full p-4 w-20 h-20 mx-auto mb-4 flex items-center justify-center shadow-lg">
+                                <span class="iconify text-3xl text-white" data-icon="mdi:wechat"></span>
                             </div>
-                            <p class="font-bold text-gray-800 mb-2">微信客服</p>
-                            <p class="text-sm text-gray-600 mb-4">备注：bot</p>
-                            <div class="bg-gray-100 rounded-xl p-4">
-                                <img src="images/wechat.png" alt="微信二维码" class="w-32 h-32 mx-auto rounded-lg">
+                            <p class="font-bold text-gray-800 mb-2 text-lg">微信客服</p>
+                            <p class="text-sm text-gray-600 mb-4">扫码添加，备注：<span class="font-semibold text-green-600">bot</span></p>
+                            <div class="bg-white rounded-2xl p-4 shadow-md">
+                                <img src="images/wechat.png" alt="微信二维码" class="w-36 h-36 mx-auto rounded-lg">
                             </div>
+                            <p class="text-xs text-gray-500 mt-3">在线时间：9:00 - 21:00</p>
                         </div>
                         
                         <!-- Telegram联系 -->
-                        <div class="mb-6">
-                            <a href="https://t.me/aduuuu2133" target="_blank" class="btn-mobile bg-blue-500 text-white px-6 py-3 rounded-xl inline-flex items-center hover:bg-blue-600 transition-colors duration-300">
-                                <span class="iconify mr-2" data-icon="mdi:telegram"></span>
-                                Telegram咨询
+                        <div class="mb-4">
+                            <a href="https://t.me/aduuuu2133" target="_blank" class="btn-mobile bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-2xl inline-flex items-center hover:shadow-lg transition-all duration-300 w-full justify-center">
+                                <span class="iconify mr-2 text-xl" data-icon="mdi:telegram"></span>
+                                <span class="font-semibold">Telegram 24小时在线</span>
                             </a>
                         </div>
-                        
-                        <button onclick="hideContact()" class="text-gray-500 text-sm">关闭</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- 页脚 -->
-        <footer class="bg-gray-800 text-white py-8 px-4 pb-32">
-            <div class="max-w-sm mx-auto text-center">
-                <p class="text-sm">© 2024 GameTrade Bot. All rights reserved.</p>
-                <div class="mt-4">
-                    <a href="javascript:void(0)" onclick="switchToDesktop()" class="text-blue-400 text-sm">切换到桌面版</a>
+        <footer class="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-12 px-5 pb-32">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-2">GameHub Bot</h3>
+                    <p class="text-gray-400 text-sm">让游戏交易更简单高效</p>
+                </div>
+                
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#features" class="text-gray-400 hover:text-white transition-colors text-sm">核心功能</a>
+                    <a href="pricing-mobile.html" class="text-gray-400 hover:text-white transition-colors text-sm">价格方案</a>
+                    <a href="changelog.html" class="text-gray-400 hover:text-white transition-colors text-sm">更新日志</a>
+                </div>
+                
+                <div class="border-t border-gray-700 pt-6 text-center">
+                    <p class="text-sm text-gray-400 mb-3">© 2024 GameHub Bot. All rights reserved.</p>
+                    <button onclick="switchToDesktop()" class="text-blue-400 text-sm hover:text-blue-300 transition-colors flex items-center justify-center mx-auto">
+                        <span class="iconify mr-1" data-icon="mdi:monitor"></span>
+                        切换到桌面版
+                    </button>
                 </div>
             </div>
         </footer>
@@ -365,24 +767,47 @@
                 menu.classList.toggle('hidden');
             }
 
-            // 显示联系方式弹窗
+            // 显示联系方式弹窗（带动画）
             function showContact() {
-                document.getElementById('contactModal').classList.remove('hidden');
+                const modal = document.getElementById('contactModal');
+                modal.classList.remove('hidden');
+                modal.classList.add('modal-enter');
                 document.body.style.overflow = 'hidden';
+                
+                // 触发内容动画
+                setTimeout(() => {
+                    const content = modal.querySelector('.modal-content-enter');
+                    if (content) {
+                        content.style.animation = 'modalSlideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                    }
+                }, 10);
             }
 
-            // 隐藏联系方式弹窗
+            // 隐藏联系方式弹窗（带动画）
             function hideContact() {
-                document.getElementById('contactModal').classList.add('hidden');
-                document.body.style.overflow = 'auto';
+                const modal = document.getElementById('contactModal');
+                modal.style.animation = 'fadeOut 0.2s ease-out';
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.style.animation = '';
+                    document.body.style.overflow = 'auto';
+                }, 200);
             }
 
-            // 平滑滚动
+            // 平滑滚动增强
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
+                    const href = this.getAttribute('href');
+                    if (href === '#contact') {
+                        e.preventDefault();
+                        showContact();
+                        return;
+                    }
+                    
+                    const target = document.querySelector(href);
                     if (target) {
+                        e.preventDefault();
                         target.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
@@ -392,13 +817,6 @@
                     }
                 });
             });
-
-            // 点击外部关闭弹窗
-            document.getElementById('contactModal').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    hideContact();
-                }
-            });
             
             // 切换到桌面版
             function switchToDesktop() {
@@ -406,14 +824,68 @@
                 window.location.href = 'index.html';
             }
             
+            // 智能导航栏隐藏和滚动效果
+            let lastScroll = 0;
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                // 添加滚动阴影效果
+                if (currentScroll > 10) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                if (currentScroll <= 60) {
+                    header.classList.remove('nav-hidden');
+                    return;
+                }
+                
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    // 向下滚动 - 隐藏导航
+                    header.classList.add('nav-hidden');
+                    // 同时关闭菜单
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                } else {
+                    // 向上滚动 - 显示导航
+                    header.classList.remove('nav-hidden');
+                }
+                
+                lastScroll = currentScroll;
+            }, { passive: true });
+            
             // 检测设备类型并显示提示
             if (window.innerWidth > 1024) {
-                // 如果在大屏幕上访问移动版，显示切换提示
                 setTimeout(function() {
                     if (confirm('检测到您正在使用大屏幕设备，是否切换到桌面版获得更好的体验？')) {
                         switchToDesktop();
                     }
                 }, 1000);
+            }
+            
+            // fadeOut动画
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeOut {
+                    from { opacity: 1; }
+                    to { opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // 性能优化：防抖
+            function debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
             }
         </script>
         

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- SEO 相关 meta 标签 -->
+        <title>价格方案 - GameHub Bot | 多平台游戏交易机器人</title>
+        <meta name="description" content="GameHub Bot支持GT平台(gametrade.jp)、GC平台(gameclub.jp)等多平台，按账号数量提供灵活的价格方案，满足不同规模用户需求。">
+        <meta name="keywords" content="游戏交易,自动发货,游戏账号,自动化交易,GameHub Bot,多平台,GT平台,GC平台,价格方案">
+        <meta name="author" content="GameHub Bot">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="theme-color" content="#667eea">
+        
+        <!-- Open Graph 标签 -->
+        <meta property="og:title" content="价格方案 - GameHub Bot">
+        <meta property="og:description" content="GameHub Bot支持多平台，按账号数量提供灵活的价格方案，满足不同规模用户需求。">
+        <meta property="og:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+        <meta property="og:url" content="https://www.gd-bot.com/pricing-mobile.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="GameHub Bot">
+        <meta property="og:locale" content="zh_CN">
+        
+        <!-- Twitter Card 标签 -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="价格方案 - GameHub Bot">
+        <meta name="twitter:description" content="GameHub Bot支持多平台，按账号数量提供灵活的价格方案，满足不同规模用户需求。">
+        <meta name="twitter:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+        
+        <!-- 规范链接 -->
+        <link rel="canonical" href="https://www.gd-bot.com/pricing-mobile.html">
+        
+        <!-- 多语言支持标签 -->
+        <link rel="alternate" hreflang="zh-CN" href="https://www.gd-bot.com/pricing-mobile.html?lang=zh-CN">
+        <link rel="alternate" hreflang="en" href="https://www.gd-bot.com/pricing-mobile.html?lang=en">
+        <link rel="alternate" hreflang="ja" href="https://www.gd-bot.com/pricing-mobile.html?lang=ja">
+        <link rel="alternate" hreflang="x-default" href="https://www.gd-bot.com/pricing-mobile.html">
+        
+        <!-- 网站图标 -->
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+        
+        <!-- CSS 引入 -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        
+        <!-- 引入 Iconify -->
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js" defer></script>
+        
+        <!-- 移动端专用样式 -->
+        <style>
+            /* 全局优化 */
+            * {
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            body {
+                overscroll-behavior: none;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            /* Hero区域 */
+            .hero-pricing {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 50vh;
+                display: flex;
+                align-items: center;
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+            
+            /* 导航栏优化 */
+            header {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            header.nav-hidden {
+                transform: translateY(-100%);
+            }
+            
+            header.scrolled {
+                box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+            }
+            
+            .menu-btn {
+                background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                transition: all 0.3s ease;
+            }
+            
+            .menu-btn:active {
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(0.95);
+            }
+            
+            /* 移动端菜单 */
+            #mobileMenu {
+                background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+                backdrop-filter: blur(20px);
+                border-radius: 0 0 20px 20px;
+                margin: 0 -1rem;
+                padding: 1rem 1rem 1.5rem;
+                animation: slideDown 0.3s ease-out;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            }
+            
+            @keyframes slideDown {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            .menu-link {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 12px;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .menu-link:active {
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(0.98);
+            }
+            
+            .menu-link-highlight {
+                background: rgba(255, 255, 255, 0.25);
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                font-weight: 600;
+            }
+            
+            /* 价格卡片 */
+            .price-card-mobile {
+                backdrop-filter: blur(10px);
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+            }
+            
+            .price-card-mobile:active {
+                transform: translateY(-4px);
+            }
+            
+            /* 计算器 */
+            .calculator-card {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: 24px;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+            }
+            
+            /* FAQ卡片 */
+            .faq-card {
+                transition: all 0.3s ease;
+            }
+            
+            .faq-card.open {
+                background: linear-gradient(135deg, #f0f4ff 0%, #e9f0ff 100%);
+            }
+            
+            /* 动画 */
+            .fade-in {
+                animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            .fade-in-delay-1 { animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both; }
+            .fade-in-delay-2 { animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both; }
+            .fade-in-delay-3 { animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both; }
+            .fade-in-delay-4 { animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both; }
+            
+            /* 按钮 */
+            .btn-mobile {
+                min-height: 56px;
+                font-size: 17px;
+                font-weight: 600;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                touch-action: manipulation;
+                letter-spacing: 0.3px;
+            }
+            
+            .btn-mobile:active {
+                transform: scale(0.96);
+            }
+            
+            /* 移动端优化 */
+            @media (max-width: 640px) {
+                body {
+                    -webkit-text-size-adjust: 100%;
+                    text-size-adjust: 100%;
+                }
+                
+                input, textarea, select {
+                    font-size: 16px !important;
+                }
+                
+                p, li {
+                    line-height: 1.7;
+                }
+                
+                h1, h2, h3 {
+                    line-height: 1.3;
+                }
+            }
+            
+            /* 安全区域适配 */
+            @supports (padding: max(0px)) {
+                header {
+                    padding-top: max(12px, env(safe-area-inset-top));
+                }
+                
+                footer {
+                    padding-bottom: max(128px, calc(128px + env(safe-area-inset-bottom)));
+                }
+            }
+        </style>
+        
+        <!-- 结构化数据 -->
+        <script type="application/ld+json" id="schema-data">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "GameHub Bot",
+          "description": "多平台游戏交易自动化机器人，支持GT平台、GC平台，提供24小时自动发货服务",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "inLanguage": ["zh-CN", "en", "ja"],
+          "availableLanguage": ["Chinese", "English", "Japanese"],
+          "url": "https://www.gd-bot.com",
+          "offers": {
+            "@type": "Offer",
+            "price": "100",
+            "priceCurrency": "CNY",
+            "availability": "https://schema.org/InStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "100"
+          }
+        }
+        </script>
+    </head>
+    <body class="bg-gray-50">
+        <!-- 导航栏 -->
+        <header class="fixed top-0 w-full z-40 shadow-lg">
+            <nav class="px-4 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <div class="bg-white/20 rounded-full p-2 mr-3 backdrop-blur-sm">
+                            <span class="iconify text-white text-xl" data-icon="mdi:gamepad-variant"></span>
+                        </div>
+                        <div class="text-xl font-bold text-white drop-shadow-md">GameHub Bot</div>
+                    </div>
+                    <button onclick="toggleMenu()" class="menu-btn p-2 rounded-xl">
+                        <span class="iconify text-2xl text-white" data-icon="mdi:menu"></span>
+                    </button>
+                </div>
+                <!-- 移动端菜单 -->
+                <div id="mobileMenu" class="hidden mt-4">
+                    <div class="space-y-2 mb-3">
+                        <a href="mobile.html" class="menu-link block py-3 px-4 text-white font-medium">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:home"></span>
+                                首页
+                            </span>
+                        </a>
+                        <a href="mobile.html#features" class="menu-link block py-3 px-4 text-white font-medium">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:star-outline"></span>
+                                核心功能
+                            </span>
+                        </a>
+                        <a href="pricing-mobile.html" class="menu-link menu-link-highlight block py-3 px-4 text-white font-bold">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:currency-cny"></span>
+                                价格方案
+                            </span>
+                        </a>
+                        <a href="changelog.html" class="menu-link block py-3 px-4 text-white font-medium">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:update"></span>
+                                更新日志
+                            </span>
+                        </a>
+                        <a href="#contact" class="menu-link block py-3 px-4 text-white font-medium">
+                            <span class="flex items-center">
+                                <span class="iconify mr-3 text-lg" data-icon="mdi:message-text"></span>
+                                立即咨询
+                            </span>
+                        </a>
+                    </div>
+                    <div class="bg-white/15 border border-white/20 rounded-12 p-4">
+                        <label class="text-white text-sm block mb-2 font-medium">
+                            <span class="iconify mr-1" data-icon="mdi:translate"></span>
+                            语言 / Language
+                        </label>
+                        <select id="langSelect" class="w-full px-3 py-2.5 border border-white/30 rounded-lg bg-white/20 text-white font-medium backdrop-blur-sm">
+                            <option value="zh-CN" class="bg-gray-800">简体中文</option>
+                            <option value="en" class="bg-gray-800">English</option>
+                            <option value="ja" class="bg-gray-800">日本語</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero横幅 -->
+        <section class="hero-pricing text-white px-5">
+            <div class="text-center max-w-md mx-auto">
+                <div class="fade-in">
+                    <span class="iconify text-6xl mb-4 inline-block drop-shadow-lg" data-icon="mdi:currency-cny"></span>
+                    <h1 class="text-4xl font-bold mb-4 leading-tight drop-shadow-lg">价格方案</h1>
+                    <p class="text-xl font-semibold mb-3">灵活定价，按需选择</p>
+                    <p class="text-base text-white px-4 leading-relaxed opacity-90">根据账号数量提供最合适的价格方案</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 价格说明 -->
+        <section class="py-8 px-5 bg-white">
+            <div class="max-w-md mx-auto">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-lg p-6 border-2 border-blue-200">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
+                        <span class="iconify text-blue-600 mr-2" data-icon="mdi:information-outline"></span>
+                        价格说明
+                    </h3>
+                    <ul class="space-y-3 text-gray-700 text-sm">
+                        <li class="flex items-start">
+                            <span class="iconify text-blue-600 mr-2 mt-0.5 flex-shrink-0" data-icon="mdi:check-circle"></span>
+                            <span>价格已包含所有功能、代理费、谷歌打码（有限额）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-blue-600 mr-2 mt-0.5 flex-shrink-0" data-icon="mdi:check-circle"></span>
+                            <span>支持GT平台(gametrade.jp)、GC平台(gameclub.jp)等</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-blue-600 mr-2 mt-0.5 flex-shrink-0" data-icon="mdi:check-circle"></span>
+                            <span>套餐周期为30天，可随时续费延长</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-600 mr-2 mt-0.5 flex-shrink-0" data-icon="mdi:star-circle"></span>
+                            <span class="font-medium text-green-700">年付优惠：一次性支付12个月享受85折</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 价格方案卡片 -->
+        <section class="py-8 px-5 bg-gradient-to-b from-white to-gray-50">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-3">热门方案</h2>
+                    <p class="text-gray-600">选择适合您的套餐</p>
+                </div>
+                
+                <div class="space-y-5">
+                    <!-- 基础版 -->
+                    <div class="price-card-mobile bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-2xl p-6 shadow-lg fade-in-delay-1">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-1">基础版</h3>
+                                <p class="text-gray-600 text-sm">适合小型商户</p>
+                            </div>
+                            <div class="bg-blue-600 text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-md">
+                                <span class="iconify mr-1" data-icon="mdi:star"></span>推荐
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-4xl font-bold text-blue-800 mb-1">
+                                100<span class="text-lg text-gray-600">元/月</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">1-2个账号</p>
+                            <p class="text-xs text-blue-700 mt-1">年付仅需 1020元（节省180元）</p>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <span class="iconify text-blue-700 mr-2" data-icon="mdi:check-circle"></span>
+                                全自动商品管理
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-blue-700 mr-2" data-icon="mdi:check-circle"></span>
+                                24小时自动发货
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-blue-700 mr-2" data-icon="mdi:check-circle"></span>
+                                智能消息处理
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-blue-700 mr-2" data-icon="mdi:check-circle"></span>
+                                赠送谷歌打码 4000次
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn-mobile bg-blue-600 text-white px-6 py-3 rounded-xl inline-block w-full text-center shadow-md">
+                            选择方案
+                        </a>
+                    </div>
+
+                    <!-- 专业版 -->
+                    <div class="price-card-mobile bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-300 rounded-2xl p-6 shadow-lg fade-in-delay-2">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-1">专业版</h3>
+                                <p class="text-gray-600 text-sm">适合中型商户</p>
+                            </div>
+                            <div class="bg-green-600 text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-md">
+                                <span class="iconify mr-1" data-icon="mdi:fire"></span>热门
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-4xl font-bold text-green-800 mb-1">
+                                200<span class="text-lg text-gray-600">元/月</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">5个账号</p>
+                            <p class="text-xs text-green-700 mt-1">年付仅需 2040元（节省360元）</p>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <span class="iconify text-green-700 mr-2" data-icon="mdi:check-circle"></span>
+                                基础版全部功能
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-green-700 mr-2" data-icon="mdi:check-circle"></span>
+                                数据分析免费
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-green-700 mr-2" data-icon="mdi:check-circle"></span>
+                                优先技术支持
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-green-700 mr-2" data-icon="mdi:check-circle"></span>
+                                赠送谷歌打码 8000次
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn-mobile bg-green-600 text-white px-6 py-3 rounded-xl inline-block w-full text-center shadow-md">
+                            选择方案
+                        </a>
+                    </div>
+
+                    <!-- 企业版 -->
+                    <div class="price-card-mobile bg-gradient-to-br from-purple-50 to-purple-100 border-2 border-purple-300 rounded-2xl p-6 shadow-lg fade-in-delay-3">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-1">企业版</h3>
+                                <p class="text-gray-600 text-sm">适合大型商户</p>
+                            </div>
+                            <div class="bg-purple-600 text-white text-xs px-3 py-1.5 rounded-full font-semibold shadow-md">
+                                <span class="iconify mr-1" data-icon="mdi:crown"></span>高级
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="text-4xl font-bold text-purple-800 mb-1">
+                                定制<span class="text-lg text-gray-600">价格</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">6+个账号</p>
+                            <p class="text-xs text-purple-700 mt-1">账号数量越多，单价越低</p>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-4">
+                            <li class="flex items-center">
+                                <span class="iconify text-purple-700 mr-2" data-icon="mdi:check-circle"></span>
+                                专业版全部功能
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-purple-700 mr-2" data-icon="mdi:check-circle"></span>
+                                定制化开发
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-purple-700 mr-2" data-icon="mdi:check-circle"></span>
+                                专属客户经理
+                            </li>
+                            <li class="flex items-center">
+                                <span class="iconify text-purple-700 mr-2" data-icon="mdi:check-circle"></span>
+                                不限打码次数
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn-mobile bg-purple-600 text-white px-6 py-3 rounded-xl inline-block w-full text-center shadow-md">
+                            联系咨询
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 价格计算器 -->
+        <section class="py-12 px-5 bg-gray-50">
+            <div class="max-w-md mx-auto">
+                <div class="calculator-card text-white">
+                    <div class="text-center mb-6">
+                        <span class="iconify text-5xl mb-3 inline-block" data-icon="mdi:calculator"></span>
+                        <h3 class="text-2xl font-bold mb-2">价格计算器</h3>
+                        <p class="text-sm opacity-90">快速计算您的专属报价</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">账号数量</label>
+                            <input type="number" id="accountNumber" min="1" placeholder="请输入账号数量" 
+                                   class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/60 backdrop-blur-sm focus:ring-2 focus:ring-white/50 focus:border-white/50 transition">
+                        </div>
+                        
+                        <div class="flex items-center bg-white/10 rounded-xl p-3">
+                            <input type="checkbox" id="yearlyPlan" class="w-5 h-5 rounded border-white/30 text-purple-600 focus:ring-white/50">
+                            <label for="yearlyPlan" class="ml-3 text-sm font-medium">
+                                计算年付价格（享85折优惠）
+                            </label>
+                        </div>
+                        
+                        <button onclick="calculatePrice()" class="btn-mobile bg-white text-purple-700 px-6 py-4 rounded-xl w-full font-bold shadow-lg">
+                            <span class="iconify mr-2" data-icon="mdi:calculator-variant"></span>
+                            立即计算
+                        </button>
+                        
+                        <div id="priceResult" class="hidden bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
+                            <div class="text-center">
+                                <p class="text-sm opacity-90 mb-1">预估费用</p>
+                                <p class="text-3xl font-bold mb-3">
+                                    <span id="calculatedPrice">0</span> 元
+                                </p>
+                                <div class="border-t border-white/30 pt-3">
+                                    <p class="text-sm opacity-90 mb-1">赠送谷歌打码</p>
+                                    <p class="text-xl font-bold">
+                                        <span id="codeTimes">0</span> 次
+                                    </p>
+                                </div>
+                                <p id="saveInfo" class="text-sm text-yellow-300 mt-3 hidden"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 优惠活动 -->
+        <section class="py-12 px-5 bg-white">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-3">限时优惠</h2>
+                    <p class="text-gray-600">多种优惠方式任您选择</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-r from-green-50 to-green-100 border-2 border-green-300 rounded-2xl p-5 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-green-500 rounded-full p-3 mr-4 flex-shrink-0">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:calendar-check"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-1">年付优惠</h4>
+                                <p class="text-sm text-gray-600 mb-2">一次性购买12个月服务</p>
+                                <p class="text-xl font-bold text-green-700">享受85折优惠</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 border-2 border-blue-300 rounded-2xl p-5 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 rounded-full p-3 mr-4 flex-shrink-0">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:account-group"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-1">多账号优惠</h4>
+                                <p class="text-sm text-gray-600 mb-2">账号数量越多</p>
+                                <p class="text-xl font-bold text-blue-700">单价越优惠</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-purple-50 to-purple-100 border-2 border-purple-300 rounded-2xl p-5 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-purple-500 rounded-full p-3 mr-4 flex-shrink-0">
+                                <span class="iconify text-2xl text-white" data-icon="mdi:gift"></span>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800 mb-1">新用户福利</h4>
+                                <p class="text-sm text-gray-600 mb-2">首次购买用户</p>
+                                <p class="text-xl font-bold text-purple-700">专属优惠码</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="py-12 px-5 bg-gray-50">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-3">常见问题</h2>
+                    <p class="text-gray-600">快速找到您关心的答案</p>
+                </div>
+                
+                <div class="space-y-3">
+                    <div class="faq-card bg-white rounded-xl p-5 shadow-md" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-gray-800 flex-1 pr-3">如何选择合适的价格方案？</h4>
+                            <span class="iconify text-xl text-gray-400 transform transition-transform" data-icon="mdi:chevron-down"></span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-3 hidden leading-relaxed">
+                            根据您需要管理的账号数量选择对应的价格方案。如有疑问，可以联系客服为您提供专业建议。
+                        </p>
+                    </div>
+                    
+                    <div class="faq-card bg-white rounded-xl p-5 shadow-md" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-gray-800 flex-1 pr-3">价格方案包含哪些功能？</h4>
+                            <span class="iconify text-xl text-gray-400 transform transition-transform" data-icon="mdi:chevron-down"></span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-3 hidden leading-relaxed">
+                            所有价格方案均包含核心功能：全自动商品管理、24小时自动发货、智能消息处理、多平台支持等。高级方案包含数据分析和定制服务。
+                        </p>
+                    </div>
+                    
+                    <div class="faq-card bg-white rounded-xl p-5 shadow-md" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-gray-800 flex-1 pr-3">如何进行付款？</h4>
+                            <span class="iconify text-xl text-gray-400 transform transition-transform" data-icon="mdi:chevron-down"></span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-3 hidden leading-relaxed">
+                            我们支持微信、支付宝等多种支付方式。选择方案后，客服会为您提供相应的支付信息和指导。
+                        </p>
+                    </div>
+                    
+                    <div class="faq-card bg-white rounded-xl p-5 shadow-md" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-gray-800 flex-1 pr-3">谷歌打码次数不够怎么办？</h4>
+                            <span class="iconify text-xl text-gray-400 transform transition-transform" data-icon="mdi:chevron-down"></span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-3 hidden leading-relaxed">
+                            超出赠送次数后，按0.005元/次单独收费。您也可以升级到更高套餐获得更多赠送次数。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系咨询 -->
+        <section id="contact" class="py-12 px-5 bg-gradient-to-br from-blue-600 via-purple-600 to-purple-700">
+            <div class="max-w-md mx-auto text-center text-white">
+                <div class="mb-8">
+                    <span class="iconify text-6xl mb-4 inline-block" data-icon="mdi:chat"></span>
+                    <h2 class="text-3xl font-bold mb-3">准备开始了吗？</h2>
+                    <p class="text-lg opacity-90">立即联系我们，获取专属优惠方案</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 mb-6">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="bg-green-500 rounded-full p-3">
+                            <span class="iconify text-3xl text-white" data-icon="mdi:wechat"></span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">微信客服</h3>
+                    <p class="text-sm opacity-90 mb-4">扫码添加，备注：<span class="font-bold">bot</span></p>
+                    <div class="bg-white rounded-2xl p-4 inline-block">
+                        <img src="images/wechat.png" alt="微信二维码" class="w-36 h-36 rounded-lg">
+                    </div>
+                    <p class="text-xs opacity-75 mt-3">在线时间：9:00 - 21:00</p>
+                </div>
+                
+                <a href="https://t.me/aduuuu2133" target="_blank" class="btn-mobile bg-white text-blue-600 px-8 py-4 rounded-2xl inline-flex items-center justify-center w-full shadow-xl">
+                    <span class="iconify mr-2 text-xl" data-icon="mdi:telegram"></span>
+                    <span class="font-bold">Telegram 24小时在线</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="bg-gradient-to-b from-gray-800 to-gray-900 text-white py-12 px-5">
+            <div class="max-w-md mx-auto">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-2">GameHub Bot</h3>
+                    <p class="text-gray-400 text-sm">让游戏交易更简单高效</p>
+                </div>
+                
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="mobile.html" class="text-gray-400 hover:text-white transition-colors text-sm">首页</a>
+                    <a href="mobile.html#features" class="text-gray-400 hover:text-white transition-colors text-sm">核心功能</a>
+                    <a href="pricing-mobile.html" class="text-gray-400 hover:text-white transition-colors text-sm">价格方案</a>
+                    <a href="changelog.html" class="text-gray-400 hover:text-white transition-colors text-sm">更新日志</a>
+                </div>
+                
+                <div class="border-t border-gray-700 pt-6 text-center">
+                    <p class="text-sm text-gray-400 mb-3">© 2024 GameHub Bot. All rights reserved.</p>
+                    <button onclick="switchToDesktop()" class="text-blue-400 text-sm hover:text-blue-300 transition-colors flex items-center justify-center mx-auto">
+                        <span class="iconify mr-1" data-icon="mdi:monitor"></span>
+                        切换到桌面版
+                    </button>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script>
+            // 菜单切换
+            function toggleMenu() {
+                const menu = document.getElementById('mobileMenu');
+                menu.classList.toggle('hidden');
+            }
+            
+            // FAQ切换
+            function toggleFaq(element) {
+                const content = element.querySelector('p');
+                const icon = element.querySelector('.iconify');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                element.classList.toggle('open');
+            }
+            
+            // 价格计算
+            function calculatePrice() {
+                const accountNum = parseInt(document.getElementById('accountNumber').value);
+                const isYearly = document.getElementById('yearlyPlan').checked;
+                
+                if (!accountNum || accountNum <= 0) {
+                    alert('请输入有效的账号数量');
+                    return;
+                }
+                
+                let monthlyPrice = 0;
+                if (accountNum <= 2) {
+                    monthlyPrice = 100;
+                } else if (accountNum <= 5) {
+                    monthlyPrice = 200;
+                } else if (accountNum <= 199) {
+                    monthlyPrice = 200 + (accountNum - 5) * 10;
+                } else if (accountNum <= 499) {
+                    monthlyPrice = 2000 + (accountNum - 200) * 6;
+                } else {
+                    document.getElementById('calculatedPrice').textContent = '请联系客服';
+                    document.getElementById('codeTimes').textContent = '按需配置';
+                    document.getElementById('priceResult').classList.remove('hidden');
+                    return;
+                }
+                
+                let finalPrice = monthlyPrice;
+                if (isYearly) {
+                    finalPrice = Math.round(monthlyPrice * 12 * 0.85);
+                    const savings = monthlyPrice * 12 - finalPrice;
+                    document.getElementById('saveInfo').textContent = `比月付节省 ${savings} 元`;
+                    document.getElementById('saveInfo').classList.remove('hidden');
+                } else {
+                    document.getElementById('saveInfo').classList.add('hidden');
+                }
+                
+                document.getElementById('calculatedPrice').textContent = finalPrice;
+                
+                // 计算打码次数
+                const codeTimes = Math.round(finalPrice * 0.2 / 0.005);
+                document.getElementById('codeTimes').textContent = codeTimes.toLocaleString();
+                
+                document.getElementById('priceResult').classList.remove('hidden');
+            }
+            
+            // 切换到桌面版
+            function switchToDesktop() {
+                sessionStorage.setItem('manualSwitch', 'true');
+                window.location.href = 'pricing.html';
+            }
+            
+            // 智能导航栏
+            let lastScroll = 0;
+            const header = document.querySelector('header');
+            
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > 10) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                if (currentScroll <= 60) {
+                    header.classList.remove('nav-hidden');
+                    return;
+                }
+                
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    header.classList.add('nav-hidden');
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                } else {
+                    header.classList.remove('nav-hidden');
+                }
+                
+                lastScroll = currentScroll;
+            }, { passive: true });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        document.getElementById('mobileMenu').classList.add('hidden');
+                    }
+                });
+            });
+        </script>
+        
+        <!-- 多语言支持 -->
+        <script src="js/i18n.js"></script>
+    </body>
+</html>
+
