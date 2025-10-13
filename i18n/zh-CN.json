@@ -1,5 +1,13 @@
 {
     "brand": "GameHub Bot",
+    "seo": {
+        "title": "GameHub Bot - 多平台游戏交易机器人 | 24小时自动发货",
+        "description": "GameHub Bot是多平台游戏交易自动化机器人，支持GT平台(gametrade.jp)、GC平台(gameclub.jp)等，提供24小时自动发货、智能消息处理、全自动商品管理等服务。未来将支持更多游戏交易平台。",
+        "keywords": "游戏交易,自动发货,游戏账号,自动化交易,GameHub Bot,多平台,GT平台,GC平台,游戏平台,gametrade,gameclub",
+        "ogTitle": "GameHub Bot - 多平台游戏交易机器人",
+        "ogDescription": "24小时自动发货，智能消息处理，让游戏交易更简单高效。支持GT、GC等多平台。",
+        "locale": "zh_CN"
+    },
     "nav": {
         "demo": "演示",
         "features": "特点"

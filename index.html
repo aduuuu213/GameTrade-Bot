@@ -30,6 +30,12 @@
         <!-- 规范链接 -->
         <link rel="canonical" href="https://www.gd-bot.com">
         
+        <!-- 多语言支持标签 -->
+        <link rel="alternate" hreflang="zh-CN" href="https://www.gd-bot.com/index.html?lang=zh-CN">
+        <link rel="alternate" hreflang="en" href="https://www.gd-bot.com/index.html?lang=en">
+        <link rel="alternate" hreflang="ja" href="https://www.gd-bot.com/index.html?lang=ja">
+        <link rel="alternate" hreflang="x-default" href="https://www.gd-bot.com/index.html">
+        
         <!-- 网站图标 -->
         <link rel="icon" type="image/png" href="/favicon.png">
         <link rel="apple-touch-icon" href="/favicon.png">
@@ -82,7 +88,7 @@
         </script>
         
         <!-- 结构化数据 -->
-        <script type="application/ld+json">
+        <script type="application/ld+json" id="schema-data">
         {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
@@ -90,10 +96,14 @@
           "description": "多平台游戏交易自动化机器人，支持GT平台、GC平台，提供24小时自动发货服务",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web",
+          "inLanguage": ["zh-CN", "en", "ja"],
+          "availableLanguage": ["Chinese", "English", "Japanese"],
+          "url": "https://www.gd-bot.com",
           "offers": {
             "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "CNY"
+            "price": "100",
+            "priceCurrency": "CNY",
+            "availability": "https://schema.org/InStock"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -126,7 +136,6 @@
                             <a href="#demo" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.demo">演示</a>
                             <a href="#features" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.features">特点</a>
                             <a href="pricing.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">价格方案</a>
-                            <a href="pricing.html#analysis" class="nav-link text-gray-700 hover:text-orange-600 transition-colors duration-300">分析服务</a>
                             <a href="changelog.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">更新日志</a>
                         </div>
                     </div>
@@ -231,120 +240,6 @@
                                 <li>• 编辑刷新与先下后上双重策略</li>
                                 <li>• 养号模式：专业账号权重提升（开发中）</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- GT商品智能分析服务 -->
-            <section class="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50" aria-label="智能分析服务">
-                <div class="max-w-7xl mx-auto px-4">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold text-gray-800 mb-4">
-                            <span class="text-blue-600">多平台商品智能分析服务</span>
-                        </h2>
-                        <p class="text-xl text-gray-600 font-medium">洞察先机，智胜市场！</p>
-                        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-6 rounded-full"></div>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-                        <!-- 核心原理 -->
-                        <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-blue-500">
-                            <div class="flex items-center mb-6">
-                                <span class="iconify text-3xl text-blue-600 mr-3" data-icon="mdi:chart-line"></span>
-                                <h3 class="text-2xl font-bold text-blue-600">核心原理</h3>
-                            </div>
-                            <p class="text-gray-700 text-lg leading-relaxed">
-                                7×24小时实时采集全站商品数据，精准监控商品售出状态，自动生成深度分析报表。
-                            </p>
-                        </div>
-
-                        <!-- 价格信息 -->
-                        <div class="bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl shadow-xl p-8">
-                            <div class="flex items-center mb-6">
-                                <span class="iconify text-3xl mr-3" data-icon="mdi:currency-cny"></span>
-                                <h3 class="text-2xl font-bold">超值价格</h3>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-4xl font-bold mb-2">300元/月</div>
-                                <p class="text-orange-100 mb-4">分析服务限时开通</p>
-                                <div class="bg-white/20 rounded-lg p-4">
-                                    <p class="text-sm">⚠️ 首批名额严格限定 <span class="font-bold text-yellow-300">10席</span></p>
-                                    <p class="text-sm mt-2">🔥 立即咨询抢占先机！</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 核心价值亮点 -->
-                    <div class="mb-16">
-                        <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">
-                            <span class="iconify text-blue-600 mr-2" data-icon="mdi:star"></span>
-                            核心价值亮点
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                                <div class="bg-green-100 rounded-full p-3 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                    <span class="iconify text-2xl text-green-600" data-icon="mdi:clock-outline"></span>
-                                </div>
-                                <h4 class="text-lg font-bold mb-3 text-center text-gray-800">平均首页曝光时长</h4>
-                                <p class="text-gray-600 text-sm text-center">精准计算商品上架后保持在搜索结果首页的平均时间，助您把握黄金曝光期，规避流量流失！</p>
-                            </div>
-                            
-                            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                                <div class="bg-blue-100 rounded-full p-3 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                    <span class="iconify text-2xl text-blue-600" data-icon="mdi:trending-up"></span>
-                                </div>
-                                <h4 class="text-lg font-bold mb-3 text-center text-gray-800">实时成交量追踪</h4>
-                                <p class="text-gray-600 text-sm text-center">动态捕捉市场成交数据，快速锁定爆款游戏及热门商品，洞悉市场风向！</p>
-                            </div>
-                            
-                            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                                <div class="bg-purple-100 rounded-full p-3 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                    <span class="iconify text-2xl text-purple-600" data-icon="mdi:finance"></span>
-                                </div>
-                                <h4 class="text-lg font-bold mb-3 text-center text-gray-800">竞品价格监控</h4>
-                                <p class="text-gray-600 text-sm text-center">全面监测同行定价动态，提供实时行情，赋能您制定更具竞争力的销售策略！</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 重磅升级预告 -->
-                    <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl shadow-2xl p-8 text-white">
-                        <div class="text-center mb-8">
-                            <h3 class="text-3xl font-bold mb-4 text-white">
-                                <span class="iconify mr-2" data-icon="mdi:rocket-launch"></span>
-                                重磅升级预告
-                            </h3>
-                            <p class="text-lg text-purple-100">与多平台系统联动，为您的店铺注入智能引擎！</p>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
-                                <div class="flex items-center mb-4">
-                                    <span class="bg-white/20 rounded-full p-2 mr-3">
-                                        <span class="iconify text-xl" data-icon="mdi:currency-cny"></span>
-                                    </span>
-                                    <h4 class="text-xl font-bold text-white">智能动态调价</h4>
-                                </div>
-                                <p class="text-purple-100">基于市场数据和预设策略，自动优化商品售价，时刻保持竞争力！</p>
-                            </div>
-                            
-                            <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
-                                <div class="flex items-center mb-4">
-                                    <span class="bg-white/20 rounded-full p-2 mr-3">
-                                        <span class="iconify text-xl" data-icon="mdi:eye-outline"></span>
-                                    </span>
-                                    <h4 class="text-xl font-bold text-white">曝光智能优化</h4>
-                                </div>
-                                <p class="text-purple-100">根据商品实时曝光表现，动态调整上架/补货节奏，最大化曝光效益！</p>
-                            </div>
-                        </div>
-                        
-                        <div class="text-center mt-8">
-                            <p class="text-lg text-yellow-300 font-medium">
-                                ✨ 功能开发中，敬请期待！现有用户将优先体验 ✨
-                            </p>
                         </div>
                     </div>
                 </div>

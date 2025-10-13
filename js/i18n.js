@@ -74,14 +74,29 @@ const i18n = {
     
     // 设置初始语言
     async setInitialLang() {
+        // 优先级：URL参数 > 本地存储 > 浏览器语言 > 默认语言
+        const urlLang = this.getLangFromUrl();
         const savedLang = localStorage.getItem('preferred-lang');
         const browserLang = this.detectBrowserLanguage();
         const defaultLang = 'zh-CN';
         
-        const initialLang = savedLang || 
+        const initialLang = urlLang || savedLang || 
                           (this.translations[browserLang] ? browserLang : defaultLang);
         
         await this.setLang(initialLang);
+    },
+    
+    // 从URL获取语言参数
+    getLangFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const langParam = urlParams.get('lang');
+        const supportedLangs = ['zh-CN', 'en', 'ja'];
+        
+        if (langParam && supportedLangs.includes(langParam)) {
+            return langParam;
+        }
+        
+        return null;
     },
     
     // 检测浏览器语言
@@ -124,6 +139,9 @@ const i18n = {
         if (langSelect) {
             langSelect.value = lang;
         }
+        
+        // 更新SEO meta标签
+        this.updateSeoMeta();
         
         // 更新页面内容
         await this.updateContent();
@@ -183,6 +201,77 @@ const i18n = {
         }
         
         return value || key;
+    },
+    
+    // 更新SEO meta标签
+    updateSeoMeta() {
+        const seoData = this.translations[this.currentLang]?.seo;
+        if (!seoData) return;
+        
+        // 更新title
+        if (seoData.title) {
+            document.title = seoData.title;
+        }
+        
+        // 更新meta description
+        this.updateMetaTag('name', 'description', seoData.description);
+        
+        // 更新meta keywords
+        this.updateMetaTag('name', 'keywords', seoData.keywords);
+        
+        // 更新Open Graph标签
+        this.updateMetaTag('property', 'og:title', seoData.ogTitle);
+        this.updateMetaTag('property', 'og:description', seoData.ogDescription);
+        this.updateMetaTag('property', 'og:locale', seoData.locale);
+        
+        // 更新Twitter Card标签
+        this.updateMetaTag('name', 'twitter:title', seoData.ogTitle);
+        this.updateMetaTag('name', 'twitter:description', seoData.ogDescription);
+        
+        // 更新结构化数据
+        this.updateSchemaData(seoData);
+        
+        // 更新URL参数
+        this.updateUrlLang();
+    },
+    
+    // 更新meta标签
+    updateMetaTag(attr, name, content) {
+        if (!content) return;
+        
+        let meta = document.querySelector(`meta[${attr}="${name}"]`);
+        if (meta) {
+            meta.setAttribute('content', content);
+        } else {
+            meta = document.createElement('meta');
+            meta.setAttribute(attr, name);
+            meta.setAttribute('content', content);
+            document.head.appendChild(meta);
+        }
+    },
+    
+    // 更新结构化数据
+    updateSchemaData(seoData) {
+        const schemaScript = document.getElementById('schema-data');
+        if (!schemaScript) return;
+        
+        try {
+            const schemaData = JSON.parse(schemaScript.textContent);
+            schemaData.description = seoData.description;
+            schemaData.inLanguage = this.currentLang;
+            schemaScript.textContent = JSON.stringify(schemaData, null, 2);
+        } catch (error) {
+            console.error('更新结构化数据失败', error);
+        }
+    },
+    
+    // 更新URL语言参数
+    updateUrlLang() {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', this.currentLang);
+        
+        // 更新浏览器历史记录，不刷新页面
+        window.history.replaceState({}, '', url.toString());
     },
     
     // 错误处理

@@ -1,5 +1,13 @@
 {
     "brand": "GameHub Bot",
+    "seo": {
+        "title": "GameHub Bot - マルチプラットフォームゲーム取引ボット | 24時間自動配送",
+        "description": "GameHub Botは、GT(gametrade.jp)、GC(gameclub.jp)など複数のプラットフォームに対応したゲーム取引自動化ボットです。24時間自動配送、スマートメッセージ処理、商品自動管理などのサービスを提供します。",
+        "keywords": "ゲーム取引,自動配送,ゲームアカウント,自動化取引,GameHub Bot,マルチプラットフォーム,GTプラットフォーム,GCプラットフォーム,gametrade,gameclub",
+        "ogTitle": "GameHub Bot - マルチプラットフォームゲーム取引ボット",
+        "ogDescription": "24時間自動配送、スマートメッセージ処理。ゲーム取引をよりシンプルで効率的に。GT、GCなど複数のプラットフォームに対応。",
+        "locale": "ja_JP"
+    },
     "nav": {
         "demo": "デモ",
         "features": "特徴"

@@ -1,5 +1,13 @@
 {
     "brand": "GameHub Bot",
+    "seo": {
+        "title": "GameHub Bot - Multi-Platform Game Trading Bot | 24/7 Auto Delivery",
+        "description": "GameHub Bot is an automated game trading bot supporting multiple platforms including GT (gametrade.jp) and GC (gameclub.jp), providing 24/7 automatic delivery, smart message processing, and automated product management.",
+        "keywords": "game trading,auto delivery,game accounts,automated trading,GameHub Bot,multi-platform,GT platform,GC platform,gametrade,gameclub",
+        "ogTitle": "GameHub Bot - Multi-Platform Game Trading Bot",
+        "ogDescription": "24/7 automatic delivery, smart message processing. Making game trading simpler and more efficient. Supporting GT, GC and more platforms.",
+        "locale": "en_US"
+    },
     "nav": {
         "demo": "Demo",
         "features": "Features"

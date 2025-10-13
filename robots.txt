@@ -1,0 +1,36 @@
+# robots.txt for GameHub Bot (www.gd-bot.com)
+
+User-agent: *
+Allow: /
+
+# 优先抓取重要页面
+Allow: /index.html
+Allow: /pricing.html
+Allow: /mobile.html
+Allow: /changelog.html
+
+# 允许抓取静态资源
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /i18n/
+
+# 排除不需要索引的资源
+Disallow: /mp4/
+
+# 站点地图
+Sitemap: https://www.gd-bot.com/sitemap.xml
+
+# 针对特定搜索引擎的优化
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# 抓取延迟（秒）- 减少服务器压力
+Crawl-delay: 1
+
