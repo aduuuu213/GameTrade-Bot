@@ -10,7 +10,8 @@
     },
     "nav": {
         "demo": "Demo",
-        "features": "Features"
+        "features": "Features",
+        "login": "Login"
     },
     "hero": {
         "title": "GameHub Bot",
@@ -104,5 +105,23 @@
         "video": {
             "error": "Your browser does not support video playback."
         }
+    },
+    "selfService": {
+        "title": "Self-Service System",
+        "subtitle": "Register and login to self-activate the system and start using it quickly",
+        "step1": {
+            "title": "Register Account",
+            "description": "Simple steps to quickly complete account registration"
+        },
+        "step2": {
+            "title": "Login System",
+            "description": "Login to the management platform with your registered account"
+        },
+        "step3": {
+            "title": "Activate Service",
+            "description": "Choose a plan, activate immediately, and start using"
+        },
+        "cta": "Register & Activate Now",
+        "note": "Support multiple payment methods, effective immediately after activation"
     }
 } 

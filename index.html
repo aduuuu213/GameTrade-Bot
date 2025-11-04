@@ -137,6 +137,7 @@
                             <a href="#features" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.features">特点</a>
                             <a href="pricing.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">价格方案</a>
                             <a href="changelog.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">更新日志</a>
+                            <a href="https://saas.gd-bot.com" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium" data-i18n="nav.login">登录</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +151,12 @@
                     <h1 class="text-5xl font-bold mb-6" data-i18n="hero.title">GameHub Bot</h1>
                     <p class="text-2xl font-semibold mb-4" data-i18n="hero.subtitle">全自动化贩卖</p>
                     <p class="text-xl mb-8" data-i18n="hero.description">多平台支持 · Web端配置 · 全自动商品管理 · 24小时无人值守 · 智能决策系统</p>
-                    <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700" data-i18n="hero.cta">立即体验</a>
+                    <a href="https://saas.gd-bot.com" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 inline-flex items-center" data-i18n="hero.cta">
+                        <span data-i18n="hero.cta">立即体验</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
                 </div>
             </section>
 
@@ -189,6 +195,46 @@
                                 <p data-i18n="demo.video.error">您的浏览器不支持视频播放。</p>
                             </video>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 自助开通系统 -->
+            <section id="self-service" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50" aria-label="自助开通系统">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold mb-4" data-i18n="selfService.title">自助开通系统</h2>
+                        <p class="text-xl text-gray-600 mb-8" data-i18n="selfService.subtitle">注册登录后，即可自助开通系统，快速开始使用</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                            <div class="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-blue-600" data-icon="mdi:account-plus"></span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="selfService.step1.title">注册账号</h3>
+                            <p class="text-gray-600" data-i18n="selfService.step1.description">简单几步，快速完成账号注册</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                            <div class="bg-green-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-green-600" data-icon="mdi:login"></span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="selfService.step2.title">登录系统</h3>
+                            <p class="text-gray-600" data-i18n="selfService.step2.description">使用注册的账号登录管理平台</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                            <div class="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <span class="iconify text-3xl text-purple-600" data-icon="mdi:rocket-launch"></span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3" data-i18n="selfService.step3.title">开通服务</h3>
+                            <p class="text-gray-600" data-i18n="selfService.step3.description">选择套餐，立即开通，开始使用</p>
+                        </div>
+                    </div>
+                    <div class="mt-12 text-center">
+                        <a href="https://saas.gd-bot.com" target="_blank" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center shadow-lg">
+                            <span class="iconify mr-2 text-xl" data-icon="mdi:arrow-right"></span>
+                            <span data-i18n="selfService.cta">立即注册开通</span>
+                        </a>
+                        <p class="mt-4 text-gray-500 text-sm" data-i18n="selfService.note">支持多种支付方式，开通后立即生效</p>
                     </div>
                 </div>
             </section>
