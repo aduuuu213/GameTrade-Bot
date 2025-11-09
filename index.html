@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-lang="zh-CN">
+<html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,12 +30,6 @@
         <!-- 规范链接 -->
         <link rel="canonical" href="https://www.gd-bot.com">
         
-        <!-- 多语言支持标签 -->
-        <link rel="alternate" hreflang="zh-CN" href="https://www.gd-bot.com/index.html?lang=zh-CN">
-        <link rel="alternate" hreflang="en" href="https://www.gd-bot.com/index.html?lang=en">
-        <link rel="alternate" hreflang="ja" href="https://www.gd-bot.com/index.html?lang=ja">
-        <link rel="alternate" hreflang="x-default" href="https://www.gd-bot.com/index.html">
-        
         <!-- 网站图标 -->
         <link rel="icon" type="image/png" href="/favicon.png">
         <link rel="apple-touch-icon" href="/favicon.png">
@@ -45,10 +39,6 @@
         <!-- CSS 引入 -->
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
-        
-        <!-- 预加载关键资源 -->
-        <link rel="preload" href="js/i18n.js" as="script">
-        <link rel="preload" href="i18n/zh-CN.json" as="fetch" crossorigin>
         
         <!-- 引入 Iconify -->
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js" defer></script>
@@ -88,7 +78,7 @@
         </script>
         
         <!-- 结构化数据 -->
-        <script type="application/ld+json" id="schema-data">
+        <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
@@ -96,8 +86,7 @@
           "description": "多平台游戏交易自动化机器人，支持GT平台、GC平台，提供24小时自动发货服务",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web",
-          "inLanguage": ["zh-CN", "en", "ja"],
-          "availableLanguage": ["Chinese", "English", "Japanese"],
+          "inLanguage": "zh-CN",
           "url": "https://www.gd-bot.com",
           "offers": {
             "@type": "Offer",
@@ -114,30 +103,22 @@
         </script>
     </head>
     <body class="bg-gray-50">
-        <!-- 语言选择器 -->
-        <div class="language-selector">
-            <select id="langSelect">
-                <option value="zh-CN">简体中文</option>
-                <option value="en">English</option>
-                <option value="ja">日本語</option>
-            </select>
-        </div>
-
         <!-- 导航栏 -->
         <header>
             <nav class="bg-white shadow-lg fixed w-full z-50" aria-label="主导航">
                 <div class="max-w-7xl mx-auto px-4">
                     <div class="flex justify-between h-16">
                         <div class="flex items-center">
-                            <span class="text-2xl font-bold text-blue-600" data-i18n="brand">GameHub Bot</span>
+                            <span class="text-2xl font-bold text-blue-600">GameHub Bot</span>
                         </div>
                         <div class="flex items-center space-x-8">
                             <a href="index.html" class="nav-link text-blue-600 font-medium transition-colors duration-300">首页</a>
-                            <a href="#demo" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.demo">演示</a>
-                            <a href="#features" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300" data-i18n="nav.features">特点</a>
+                            <a href="#demo" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">演示</a>
+                            <a href="#features" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">特点</a>
                             <a href="pricing.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">价格方案</a>
                             <a href="changelog.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">更新日志</a>
-                            <a href="https://saas.gd-bot.com" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium" data-i18n="nav.login">登录</a>
+                            <a href="https://doc.gd-bot.com" target="_blank" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300">使用文档</a>
+                            <a href="https://saas.gd-bot.com" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium">登录</a>
                         </div>
                     </div>
                 </div>
@@ -148,11 +129,11 @@
             <!-- 主横幅 -->
             <section class="hero-bg text-white pt-32 pb-20" aria-label="主要内容">
                 <div class="max-w-7xl mx-auto px-4 text-center">
-                    <h1 class="text-5xl font-bold mb-6" data-i18n="hero.title">GameHub Bot</h1>
-                    <p class="text-2xl font-semibold mb-4" data-i18n="hero.subtitle">全自动化贩卖</p>
-                    <p class="text-xl mb-8" data-i18n="hero.description">多平台支持 · Web端配置 · 全自动商品管理 · 24小时无人值守 · 智能决策系统</p>
-                    <a href="https://saas.gd-bot.com" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 inline-flex items-center" data-i18n="hero.cta">
-                        <span data-i18n="hero.cta">立即体验</span>
+                    <h1 class="text-5xl font-bold mb-6">GameHub Bot</h1>
+                    <p class="text-2xl font-semibold mb-4">全自动化贩卖</p>
+                    <p class="text-xl mb-8">多平台支持 · Web端管理 · 24小时无人值守</p>
+                    <a href="https://saas.gd-bot.com" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 inline-flex items-center">
+                        <span>立即体验</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                         </svg>
@@ -163,36 +144,36 @@
             <!-- 视频演示 -->
             <section id="demo" class="py-20 bg-gray-50" aria-label="功能演示">
                 <div class="max-w-7xl mx-auto px-4">
-                    <h2 class="text-3xl font-bold text-center mb-12" data-i18n="demo.title">功能演示</h2>
+                    <h2 class="text-3xl font-bold text-center mb-12">功能演示</h2>
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="space-y-6">
-                            <h3 class="text-2xl font-bold text-gray-800" data-i18n="demo.subtitle">全自动化操作演示</h3>
-                            <p class="text-gray-600 text-lg" data-i18n="demo.description">观看系统如何实现全自动化商品管理、自动发货、智能消息处理等核心功能。</p>
+                            <h3 class="text-2xl font-bold text-gray-800">核心功能演示</h3>
+                            <p class="text-gray-600 text-lg">自动商品管理、智能发货、消息处理一站式解决</p>
                             <div class="space-y-4">
                                 <div class="flex items-center space-x-3">
                                     <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span data-i18n="demo.features.web">Web端一键配置</span>
+                                    <span>Web端一键配置</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span data-i18n="demo.features.manage">全自动商品管理</span>
+                                    <span>全自动商品管理</span>
                                 </div>
                                 <div class="flex items-center space-x-3">
                                     <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span data-i18n="demo.features.message">智能消息处理</span>
+                                    <span>智能消息处理</span>
                                 </div>
                             </div>
                         </div>
                         <div class="relative rounded-lg overflow-hidden shadow-xl">
                             <video class="w-full" controls poster="images/82b91715850941.png">
                                 <source src="mp4/ba301726479789_20250318_18005034.mp4" type="video/mp4">
-                                <p data-i18n="demo.video.error">您的浏览器不支持视频播放。</p>
+                                <p>您的浏览器不支持视频播放。</p>
                             </video>
                         </div>
                     </div>
@@ -203,38 +184,38 @@
             <section id="self-service" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50" aria-label="自助开通系统">
                 <div class="max-w-7xl mx-auto px-4">
                     <div class="text-center mb-12">
-                        <h2 class="text-3xl font-bold mb-4" data-i18n="selfService.title">自助开通系统</h2>
-                        <p class="text-xl text-gray-600 mb-8" data-i18n="selfService.subtitle">注册登录后，即可自助开通系统，快速开始使用</p>
+                        <h2 class="text-3xl font-bold mb-4">快速开通</h2>
+                        <p class="text-xl text-gray-600 mb-8">三步开通，立即使用</p>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
                             <div class="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                 <span class="iconify text-3xl text-blue-600" data-icon="mdi:account-plus"></span>
                             </div>
-                            <h3 class="text-xl font-bold mb-3" data-i18n="selfService.step1.title">注册账号</h3>
-                            <p class="text-gray-600" data-i18n="selfService.step1.description">简单几步，快速完成账号注册</p>
+                            <h3 class="text-xl font-bold mb-3">注册账号</h3>
+                            <p class="text-gray-600">快速注册，无需审核</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
                             <div class="bg-green-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                 <span class="iconify text-3xl text-green-600" data-icon="mdi:login"></span>
                             </div>
-                            <h3 class="text-xl font-bold mb-3" data-i18n="selfService.step2.title">登录系统</h3>
-                            <p class="text-gray-600" data-i18n="selfService.step2.description">使用注册的账号登录管理平台</p>
+                            <h3 class="text-xl font-bold mb-3">登录系统</h3>
+                            <p class="text-gray-600">登录管理平台</p>
                         </div>
                         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
                             <div class="bg-purple-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                 <span class="iconify text-3xl text-purple-600" data-icon="mdi:rocket-launch"></span>
                             </div>
-                            <h3 class="text-xl font-bold mb-3" data-i18n="selfService.step3.title">开通服务</h3>
-                            <p class="text-gray-600" data-i18n="selfService.step3.description">选择套餐，立即开通，开始使用</p>
+                            <h3 class="text-xl font-bold mb-3">开通服务</h3>
+                            <p class="text-gray-600">选择套餐，立即开通</p>
                         </div>
                     </div>
                     <div class="mt-12 text-center">
                         <a href="https://saas.gd-bot.com" target="_blank" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center shadow-lg">
                             <span class="iconify mr-2 text-xl" data-icon="mdi:arrow-right"></span>
-                            <span data-i18n="selfService.cta">立即注册开通</span>
+                            <span>立即注册开通</span>
                         </a>
-                        <p class="mt-4 text-gray-500 text-sm" data-i18n="selfService.note">支持多种支付方式，开通后立即生效</p>
+                        <p class="mt-4 text-gray-500 text-sm">支持多种支付方式，开通后立即生效</p>
                     </div>
                 </div>
             </section>
@@ -242,32 +223,62 @@
             <!-- 核心功能 -->
             <section id="features" class="py-20" aria-label="核心功能">
                 <div class="max-w-7xl mx-auto px-4">
-                    <h2 class="text-3xl font-bold text-center mb-12" data-i18n="features.title">核心功能</h2>
+                    <h2 class="text-3xl font-bold text-center mb-12">核心功能</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- 功能卡片 -->
                         <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold mb-4" data-i18n="features.autoManage.title">全自动商品管理</h3>
-                            <ul class="text-gray-600 space-y-2" data-i18n="features.autoManage.items"></ul>
+                            <h3 class="text-xl font-bold mb-4">全自动商品管理</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 支持10 * 120号商品管理</li>
+                                <li>• 智能上架策略</li>
+                                <li>• 自动刷新商品</li>
+                                <li>• 批量下架功能</li>
+                            </ul>
                         </div>
                         <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold mb-4" data-i18n="features.inventory.title">库存与发货管理</h3>
-                            <ul class="text-gray-600 space-y-2" data-i18n="features.inventory.items"></ul>
+                            <h3 class="text-xl font-bold mb-4">库存与发货管理</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 实时库存监控</li>
+                                <li>• 订单自动匹配</li>
+                                <li>• 24小时自动发货</li>
+                                <li>• 发货状态追踪</li>
+                            </ul>
                         </div>
                         <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold mb-4" data-i18n="features.message.title">智能消息中台</h3>
-                            <ul class="text-gray-600 space-y-2" data-i18n="features.message.items"></ul>
+                            <h3 class="text-xl font-bold mb-4">智能消息中台</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 集中处理订单消息</li>
+                                <li>• 关键词自动回复</li>
+                                <li>• 智能评价系统</li>
+                                <li>• 多账号协同处理</li>
+                            </ul>
                         </div>
                         <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold mb-4" data-i18n="features.balance.title">余额智能转移</h3>
-                            <ul class="text-gray-600 space-y-2" data-i18n="features.balance.items"></ul>
+                            <h3 class="text-xl font-bold mb-4">余额智能转移</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 小号余额自动转移</li>
+                                <li>• 模拟正常交易</li>
+                                <li>• 智能刷销量</li>
+                                <li>• 余额不足自动停止</li>
+                            </ul>
                         </div>
                         <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold mb-4" data-i18n="features.collection.title">采集下架系统</h3>
-                            <ul class="text-gray-600 space-y-2" data-i18n="features.collection.items"></ul>
+                            <h3 class="text-xl font-bold mb-4">采集下架系统</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 历史商品采集</li>
+                                <li>• 市场价格分析</li>
+                                <li>• 智能下架策略</li>
+                                <li>• 批量操作支持</li>
+                            </ul>
                         </div>
                         <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold mb-4" data-i18n="features.verification.title">打码验证系统</h3>
-                            <ul class="text-gray-600 space-y-2" data-i18n="features.verification.items"></ul>
+                            <h3 class="text-xl font-bold mb-4">打码验证系统</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 自动验证码识别</li>
+                                <li>• 100%出品率</li>
+                                <li>• 代理IP支持</li>
+                                <li>• 异常自动处理</li>
+                            </ul>
                         </div>
                         <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
                             <h3 class="text-xl font-bold mb-4">多平台账号管理</h3>
@@ -386,11 +397,8 @@
         <!-- 页脚 -->
         <footer class="bg-gray-800 text-white py-8" aria-label="页脚">
             <div class="max-w-7xl mx-auto px-4 text-center">
-                <p data-i18n="footer.copyright">© 2024 GameHub Bot. All rights reserved.</p>
+                <p>© 2024 GameHub Bot. All rights reserved.</p>
             </div>
         </footer>
-
-        <!-- JavaScript 引入 -->
-        <script src="js/i18n.js"></script>
     </body>
 </html>
