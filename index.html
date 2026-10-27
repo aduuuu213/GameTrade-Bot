@@ -12,6 +12,9 @@
     <meta property="og:title" content="GameHub Bot - 多平台游戏交易机器人">
     <meta property="og:description" content="系统介绍与按账号数量计费的价格。支持 GT、GC，24 小时自动发货。">
     <meta property="og:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="GameHub Bot - 多平台游戏交易自动化系统">
     <meta property="og:url" content="https://www.gd-bot.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GameHub Bot">
@@ -20,42 +23,67 @@
     <meta name="twitter:title" content="GameHub Bot - 多平台游戏交易机器人">
     <meta name="twitter:description" content="系统介绍与按账号数量计费的价格。支持 GT、GC，24 小时自动发货。">
     <meta name="twitter:image" content="https://www.gd-bot.com/images/82b91715850941.png">
+    <meta name="twitter:image:alt" content="GameHub Bot - 多平台游戏交易自动化系统">
     <link rel="canonical" href="https://www.gd-bot.com">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ["Sora", "Noto Sans SC", "sans-serif"]
-                    }
-                }
-            }
-        };
-    </script>
+    <link href="css/tailwind.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js" defer></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "GameHub Bot",
-        "description": "多平台游戏交易自动化系统，支持 GT 与 GC，提供商品管理、消息处理和 24 小时自动发货。",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "inLanguage": "zh-CN",
-        "url": "https://www.gd-bot.com",
-        "offers": {
-            "@type": "Offer",
-            "price": "100",
-            "priceCurrency": "CNY",
-            "availability": "https://schema.org/InStock"
-        }
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "GameHub Bot",
+                "url": "https://www.gd-bot.com",
+                "logo": "https://www.gd-bot.com/favicon.png",
+                "description": "多平台游戏交易自动化系统"
+            },
+            {
+                "@type": "WebSite",
+                "name": "GameHub Bot",
+                "url": "https://www.gd-bot.com",
+                "inLanguage": "zh-CN"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "GameHub Bot",
+                "description": "多平台游戏交易自动化系统，支持 GT 与 GC，提供商品管理、消息处理和 24 小时自动发货。",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web",
+                "inLanguage": "zh-CN",
+                "url": "https://www.gd-bot.com",
+                "offers": {
+                    "@type": "AggregateOffer",
+                    "priceCurrency": "CNY",
+                    "lowPrice": "100",
+                    "highPrice": "200",
+                    "offerCount": "6",
+                    "availability": "https://schema.org/InStock",
+                    "priceSpecification": [
+                        {
+                            "@type": "UnitPriceSpecification",
+                            "price": "100",
+                            "priceCurrency": "CNY",
+                            "name": "1-2 个账号",
+                            "billingDuration": "P30D"
+                        },
+                        {
+                            "@type": "UnitPriceSpecification",
+                            "price": "200",
+                            "priceCurrency": "CNY",
+                            "name": "3-5 个账号",
+                            "billingDuration": "P30D"
+                        }
+                    ]
+                }
+            }
+        ]
     }
     </script>
 </head>

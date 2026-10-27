@@ -1,0 +1,7 @@
+# Redirect apex domain to www
+https://gd-bot.com/* https://www.gd-bot.com/:splat 301!
+
+# Redirect .html files to clean URLs
+/index.html / 308
+/pricing.html /#pricing 308
+/pricing-mobile.html /#pricing 308
