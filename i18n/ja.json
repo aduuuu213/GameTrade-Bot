@@ -83,11 +83,6 @@
         "scan": "QRコードをスキャンして友達追加",
         "wechat": {
             "title": "WeChat"
-        },
-        "telegram": {
-            "title": "Telegram",
-            "hours": "24時間オンライン",
-            "join": "Telegramに参加"
         }
     },
     "footer": {

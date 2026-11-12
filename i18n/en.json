@@ -83,11 +83,6 @@
         "scan": "Scan to add friend",
         "wechat": {
             "title": "WeChat"
-        },
-        "telegram": {
-            "title": "Telegram",
-            "hours": "24/7 Online",
-            "join": "Join Telegram"
         }
     },
     "footer": {
