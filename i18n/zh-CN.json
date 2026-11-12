@@ -83,11 +83,6 @@
         "scan": "扫码添加好友",
         "wechat": {
             "title": "微信"
-        },
-        "telegram": {
-            "title": "Telegram",
-            "hours": "24小时在线",
-            "join": "加入Telegram"
         }
     },
     "footer": {
